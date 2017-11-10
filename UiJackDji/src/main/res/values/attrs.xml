@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="reference" name="abstractWheelViewStyle"/>
+
+    <declare-styleable name="AbstractWheelView"><attr format="integer" name="visibleItems"/><attr format="boolean" name="isAllVisible"/><attr format="integer" name="itemOffsetPercent"/><attr format="dimension" name="itemsPadding"/><attr format="integer" name="selectionDividerDimmedAlpha"/><attr format="integer" name="selectionDividerActiveAlpha"/><attr format="reference" name="selectionDivider"/><attr format="integer" name="itemsDimmedAlpha"/><attr format="boolean" name="isCyclic"/></declare-styleable>
+    <declare-styleable name="BatteryWidget"><attr name="excludeView">
+        <flag name="batteryIcon" value="1"/>
+        <flag name="percentage" value="2"/>
+        <flag name="singleVoltage" value="4"/>
+        <flag name="doubleVoltage" value="8"/>
+    </attr></declare-styleable>
+    <declare-styleable name="DULCollection"><attr format="dimension" name="widgetSpacing"/><attr format="color" name="fillColor"/><attr format="color" name="borderColor"/><attr format="dimension" name="borderWidth"/><attr format="boolean" name="roundedCorner"/><attr format="enum" name="widgetArrangement">
+        <enum name="start" value="0"/>
+        <enum name="end" value="1"/>
+        <enum name="center" value="2"/>
+        <enum name="auto" value="3"/>
+    </attr><attr format="boolean" name="autosize"/></declare-styleable>
+    <declare-styleable name="DULTopBar"><attr format="string" name="exampleString"/><attr format="dimension" name="exampleDimension"/><attr format="color" name="exampleColor"/><attr format="color|reference" name="exampleDrawable"/></declare-styleable>
+    <declare-styleable name="FPVWidget"><attr format="enum" name="videoSource">
+        <enum name="auto" value="0"/>
+        <enum name="primary" value="1"/>
+        <enum name="secondary" value="2"/>
+    </attr></declare-styleable>
+    <declare-styleable name="PreFlightCheckListPanel"><attr name="excludeItem">
+        <flag name="overall" value="1"/>
+        <flag name="flightMode" value="2"/>
+        <flag name="compass" value="4"/>
+        <flag name="IMUStatus" value="8"/>
+        <flag name="ESCStatus" value="16"/>
+        <flag name="visionSensors" value="32"/>
+        <flag name="radioChannelQuality" value="64"/>
+        <flag name="remoteControllerMode" value="128"/>
+        <flag name="aircraftBattery" value="256"/>
+        <flag name="remoteControllerBattery" value="512"/>
+        <flag name="aircraftBatteryTemperature" value="1024"/>
+        <flag name="remainingStorageCapacity" value="2048"/>
+        <flag name="gimbalStatus" value="4096"/>
+    </attr></declare-styleable>
+    <declare-styleable name="WheelHorizontalView"><attr format="dimension" name="selectionDividerWidth"/></declare-styleable>
+    <declare-styleable name="WheelVerticalView"><attr format="dimension" name="selectionDividerHeight"/></declare-styleable>
+</resources>

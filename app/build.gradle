@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    /*signingConfigs {
+        relealse {
+            keyAlias 'jackxie'
+            keyPassword '123456'
+            storeFile file('D:/test/AbsFrame.jks')
+            storePassword '123456'
+        }
+    }*/
+
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.jack.jackzkrt"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "4.3.2"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+    }
+
+    dataBinding{
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "3g"
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    //compile 'com.dji:dji-uilibrary:4.3.2'
+    compile project(':UiJackDji')
+    compile 'com.zhy:percent-support-extends:1.1.1'
+    compile 'com.diogobernardino:williamchart:2.5.0'
+}
