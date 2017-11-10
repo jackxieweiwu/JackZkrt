@@ -7,7 +7,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import dji.common.bus.UILibEventBus;
-import dji.common.camera.SettingsDefinitions;
+import dji.common.camera.SettingsDefinitions.FocusMode;
+import dji.common.camera.SettingsDefinitions.MeteringMode;
 import dji.common.error.DJIError;
 import dji.keysdk.CameraKey;
 import dji.keysdk.DJIKey;
@@ -21,7 +22,7 @@ import zkrt.ui.base.UiBaseGViewDULFrameLayout;
 import zkrt.ui.c.a.UiCAC;
 import zkrt.ui.c.b.UiCBS;
 import zkrt.ui.d.UiDA;
-import zkrt.ui.internal.BInterNal;
+import zkrt.ui.internal.BInterNal.c;
 
 /**
  * Created by jack_xie on 17-6-1.
@@ -31,7 +32,7 @@ public class FocusExposureSwitchWidget extends UiBaseGViewDULFrameLayout impleme
     private static final String TAG = "DULFocusExposureSwitchWidget";
     private UiCAC widgetAppearances;
     private ImageView foregroundImage;
-    private FocusExposureSwitchWidget.ControlMode controlMode;
+    private ControlMode controlMode;
     private boolean manualFocusEnabled;
     private int foregroundResId;
     private DJIKey meteringModeKey;
@@ -54,12 +55,12 @@ public class FocusExposureSwitchWidget extends UiBaseGViewDULFrameLayout impleme
         UiDA.b();
         this.foregroundImage = this.findViewById(R.id.image_button_foreground);
         this.foregroundImage.setOnClickListener(this);
-        this.switchMode(FocusExposureSwitchWidget.ControlMode.AUTO_FOCUS);
-        UILibEventBus.getInstance().register(BInterNal.c.class).observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Action1<BInterNal.c>() {
+        this.switchMode(ControlMode.AUTO_FOCUS);
+        UILibEventBus.getInstance().register(c.class).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Action1<c>() {
                     @Override
-                    public void call(BInterNal.c c) {
-                        FocusExposureSwitchWidget.this.manualFocusEnabled = c.a == SettingsDefinitions.FocusMode.MANUAL;
+                    public void call(c c) {
+                        FocusExposureSwitchWidget.this.manualFocusEnabled = c.a == FocusMode.MANUAL;
                         FocusExposureSwitchWidget.this.switchMode(FocusExposureSwitchWidget.this.controlMode);
                     }
                 });
@@ -88,11 +89,11 @@ public class FocusExposureSwitchWidget extends UiBaseGViewDULFrameLayout impleme
 
     public void onClick(View var1) {
         if(KeyManager.getInstance() != null) {
-            if(this.controlMode == FocusExposureSwitchWidget.ControlMode.SPOT_METER) {
-                this.switchMode(FocusExposureSwitchWidget.ControlMode.AUTO_FOCUS);
+            if(this.controlMode == ControlMode.SPOT_METER) {
+                this.switchMode(ControlMode.AUTO_FOCUS);
             } else {
-                this.switchMode(FocusExposureSwitchWidget.ControlMode.SPOT_METER);
-                KeyManager.getInstance().setValue(this.meteringModeKey, SettingsDefinitions.MeteringMode.SPOT, new SetCallback() {
+                this.switchMode(ControlMode.SPOT_METER);
+                KeyManager.getInstance().setValue(this.meteringModeKey, MeteringMode.SPOT, new SetCallback() {
                     public void onSuccess() {
                         DJILog.d("DULFocusExposureSwitchWidget", "Spot metering set successfully!");
                     }
@@ -106,21 +107,21 @@ public class FocusExposureSwitchWidget extends UiBaseGViewDULFrameLayout impleme
         }
     }
 
-    private void switchMode(FocusExposureSwitchWidget.ControlMode var1) {
+    private void switchMode(ControlMode var1) {
         switch(var1.ordinal()) {
             case 0:
             case 1:
                 this.foregroundResId = R.drawable.rectangle_1112_metering_icon;
-                this.controlMode = FocusExposureSwitchWidget.ControlMode.SPOT_METER;
+                this.controlMode = ControlMode.SPOT_METER;
                 break;
             case 2:
             case 3:
                 if(this.manualFocusEnabled) {
                     this.foregroundResId = R.drawable.mf_area;
-                    this.controlMode = FocusExposureSwitchWidget.ControlMode.MANUAL_FOCUS;
+                    this.controlMode = ControlMode.MANUAL_FOCUS;
                 } else {
                     this.foregroundResId = R.drawable.rectangle_314_copy_2;
-                    this.controlMode = FocusExposureSwitchWidget.ControlMode.AUTO_FOCUS;
+                    this.controlMode = ControlMode.AUTO_FOCUS;
                 }
         }
 

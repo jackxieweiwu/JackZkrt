@@ -128,7 +128,7 @@ public class LauncherView extends RelativeLayout {
             public void run() {
                 showLogo();
             }
-        }, 2400);
+        }, 2650);
     }
 
     private void setAnimation(final ImageView target, ViewPath path1) {
@@ -203,7 +203,7 @@ public class LauncherView extends RelativeLayout {
         final View txt_name_four = view.findViewById(R.id.txt_name_four);
 
         ObjectAnimator alpha = ObjectAnimator.ofFloat(logo, View.ALPHA, 0f, 1f);
-        alpha.setDuration(1000);
+        alpha.setDuration(400);
 
         alpha.start();
         new Handler().postDelayed(new Runnable() {
@@ -212,6 +212,7 @@ public class LauncherView extends RelativeLayout {
                 ObjectAnimator alpha = ObjectAnimator.ofFloat(txt_name_one, View.ALPHA, 0f, 0.6f);
                 alpha.setDuration(200);
                 alpha.start();
+                startRegistApp();
             }
         }, 400);
         new Handler().postDelayed(new Runnable() {
@@ -221,7 +222,7 @@ public class LauncherView extends RelativeLayout {
                 alpha.setDuration(200);
                 alpha.start();
             }
-        }, 600);
+        }, 500);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -229,16 +230,15 @@ public class LauncherView extends RelativeLayout {
                 alpha.setDuration(200);
                 alpha.start();
             }
-        }, 800);
+        }, 600);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 ObjectAnimator alpha = ObjectAnimator.ofFloat(txt_name_four, View.ALPHA, 0f, 0.6f);
                 alpha.setDuration(200);
                 alpha.start();
-                startRegistApp();
             }
-        }, 1000);
+        }, 700);
     }
 
     private void startRegistApp(){

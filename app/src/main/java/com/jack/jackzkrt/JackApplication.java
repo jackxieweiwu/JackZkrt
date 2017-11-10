@@ -1,11 +1,12 @@
 package com.jack.jackzkrt;
 
-import zkrt.ui.BaseApplication;
+
+import com.jack.frame.core.AbsApplication;
 
 /**
  * Created by jack_xie on 17-11-9.
  */
 
-public class JackApplication extends BaseApplication {
+public class JackApplication extends AbsApplication {
 
 }

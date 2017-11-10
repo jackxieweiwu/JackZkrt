@@ -19,7 +19,7 @@ import zkrt.ui.c.a.UiCAC;
 import zkrt.ui.c.b.UiCBB;
 import zkrt.ui.d.UiDA;
 import zkrt.ui.d.UiDL;
-import zkrt.ui.internal.BInterNal;
+import zkrt.ui.internal.BInterNal.a;
 import zkrt.ui.internal.DULParentChildrenViewAnimator;
 import zkrt.ui.internal.DULTabBarView;
 import zkrt.ui.internal.camera.InterCamera_A;
@@ -109,24 +109,24 @@ public class CameraSettingAdvancedPanel extends UiBaseGViewDULFrameLayout implem
         UiDL.c(this);
         this.initTabBar();
         this.initTitleBar();
-        this.contentAnimator = (DULParentChildrenViewAnimator)this.findViewById(R.id.camera_setting_content);
-        InterCamera_A var4 = (InterCamera_A)this.findViewById(R.id.camera_setting_content_photo);
+        this.contentAnimator = this.findViewById(R.id.camera_setting_content);
+        InterCamera_A var4 = this.findViewById(R.id.camera_setting_content_photo);
         var4.setRootViewCallback(this);
         var4.setTitleTextView(this.textTitle);
-        InterCamera_A var5 = (InterCamera_A)this.findViewById(R.id.camera_setting_content_video);
+        InterCamera_A var5 = this.findViewById(R.id.camera_setting_content_video);
         var5.setRootViewCallback(this);
         var5.setTitleTextView(this.textTitle);
-        InterCamera_A var6 = (InterCamera_A)this.findViewById(R.id.camera_setting_content_other);
+        InterCamera_A var6 = this.findViewById(R.id.camera_setting_content_other);
         var6.setRootViewCallback(this);
         var6.setTitleTextView(this.textTitle);
     }
 
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        this.subscription.add(UILibEventBus.getInstance().register(BInterNal.a.class).
-                observeOn(AndroidSchedulers.mainThread()).subscribe(new Action1<BInterNal.a>() {
+        this.subscription.add(UILibEventBus.getInstance().register(a.class).
+                observeOn(AndroidSchedulers.mainThread()).subscribe(new Action1<a>() {
             @Override
-            public void call(BInterNal.a a) {
+            public void call(a a) {
                 if(a.a()) {
                     CameraSettingAdvancedPanel.this.setVisibility(VISIBLE);
                 } else {

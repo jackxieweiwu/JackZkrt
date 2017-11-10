@@ -15,6 +15,7 @@ import dji.thirdparty.rx.android.schedulers.AndroidSchedulers;
 import dji.thirdparty.rx.functions.Action1;
 import zkrt.ui.d.UiDL;
 import zkrt.ui.internal.EInterNal;
+import zkrt.ui.widget.FocusExposureSwitchWidget.ControlMode;
 
 /**
  * Created by jack_xie on 17-11-6.
@@ -31,11 +32,11 @@ public class ManualFocusWidget extends EInterNal {
     public ManualFocusWidget(Context var1, AttributeSet var2) {
         super(var1, var2, 0);
         this.setVisibility(INVISIBLE);
-        UILibEventBus.getInstance().register(FocusExposureSwitchWidget.ControlMode.class).observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Action1<FocusExposureSwitchWidget.ControlMode>() {
+        UILibEventBus.getInstance().register(ControlMode.class).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Action1<ControlMode>() {
                     @Override
-                    public void call(FocusExposureSwitchWidget.ControlMode controlMode) {
-                        UiDL.a(ManualFocusWidget.this, controlMode == FocusExposureSwitchWidget.ControlMode.MANUAL_FOCUS);
+                    public void call(ControlMode controlMode) {
+                        UiDL.a(ManualFocusWidget.this, controlMode == ControlMode.MANUAL_FOCUS);
                     }
                 });
     }

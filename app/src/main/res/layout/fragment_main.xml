@@ -1,71 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/tools"
-    xmlns:custom="http://schemas.android.com/apk/res-auto">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <com.zhy.android.percent.support.PercentRelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Widget to see first person view (FPV) -->
-        <zkrt.ui.widget.FPVWidget
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+        <com.zhy.android.percent.support.PercentFrameLayout
+            android:background="@color/blue"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            app:layout_heightPercent="14%w"
+            app:layout_widthPercent="25%w">
 
-        <zkrt.ui.widget.FPVOverlayWidget
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            <dji.ui.widget.FPVWidget
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <dji.ui.widget.FPVOverlayWidget
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.zhy.android.percent.support.PercentFrameLayout>
 
         <!-- Widgets in top status bar -->
-        <LinearLayout
+        <com.zhy.android.percent.support.PercentLinearLayout
             android:id="@+id/signal"
             android:layout_width="0dip"
             android:layout_height="0dip"
-            app:layout_heightPercent="5%sh"
-            app:layout_widthPercent="100%sh"
+            app:layout_heightPercent="5%w"
+            app:layout_widthPercent="100%w"
             android:background="@color/dark_gray"
             android:orientation="horizontal">
 
-            <zkrt.ui.widget.PreFlightStatusWidget
+            <dji.ui.widget.PreFlightStatusWidget
                 android:layout_width="238dp"
-                android:layout_height="25dp"/>
+                android:layout_height="match_parent"/>
 
-            <zkrt.ui.widget.FlightModeWidget
+            <dji.ui.widget.FlightModeWidget
                 android:layout_width="103dp"
-                android:layout_height="22dp"/>
+                android:layout_height="match_parent"/>
 
-            <zkrt.ui.widget.GPSSignalWidget
+            <dji.ui.widget.GPSSignalWidget
                 android:layout_width="44dp"
-                android:layout_height="22dp"/>
+                android:layout_height="match_parent"/>
 
-            <zkrt.ui.widget.VisionWidget
+            <dji.ui.widget.VisionWidget
                 android:layout_width="22dp"
-                android:layout_height="22dp"/>
+                android:layout_height="match_parent"/>
 
-            <zkrt.ui.widget.RemoteControlSignalWidget
+            <dji.ui.widget.RemoteControlSignalWidget
                 android:layout_width="38dp"
-                android:layout_height="22dp"/>
+                android:layout_height="match_parent"/>
 
-            <zkrt.ui.widget.VideoSignalWidget
+            <dji.ui.widget.VideoSignalWidget
                 android:layout_width="38dp"
-                android:layout_height="22dp"/>
+                android:layout_height="match_parent"/>
 
-            <zkrt.ui.widget.WiFiSignalWidget
+            <dji.ui.widget.WiFiSignalWidget
                 android:layout_width="22dp"
                 android:layout_height="20dp"/>
 
-            <zkrt.ui.widget.BatteryWidget
+            <dji.ui.widget.BatteryWidget
                 android:layout_width="96dp"
-                android:layout_height="22dp"
-                custom:excludeView="singleVoltage"/>
+                android:layout_height="match_parent"
+                app:excludeView="singleVoltage"/>
 
-            <zkrt.ui.widget.ConnectionWidget
+            <dji.ui.widget.ConnectionWidget
                 android:layout_marginTop="3dp"
                 android:layout_width="18dp"
                 android:layout_height="18dp"/>
-        </LinearLayout>
+        </com.zhy.android.percent.support.PercentLinearLayout>
 
     </com.zhy.android.percent.support.PercentRelativeLayout>
 </layout>

@@ -1,26 +1,26 @@
 [
     {
-        "merged": "/Users/jack/androidWord/JackZkrt/UiJackDji/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_template_big_media.xml",
-        "source": "/Users/jack/.android/build-cache/3b7be180e8c4aac81ead7517dc6aa9484ad3e170/output/res/layout-v11/notification_template_big_media.xml"
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/layout-v11/notification_media_cancel_action.xml"
     },
     {
-        "merged": "/Users/jack/androidWord/JackZkrt/UiJackDji/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
-        "source": "/Users/jack/.android/build-cache/3b7be180e8c4aac81ead7517dc6aa9484ad3e170/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_media_action.xml",
+        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/layout-v11/notification_media_action.xml"
     },
     {
-        "merged": "/Users/jack/androidWord/JackZkrt/UiJackDji/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_media_action.xml",
-        "source": "/Users/jack/.android/build-cache/3b7be180e8c4aac81ead7517dc6aa9484ad3e170/output/res/layout-v11/notification_media_action.xml"
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/layout-v11/notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "/Users/jack/androidWord/JackZkrt/UiJackDji/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_media_cancel_action.xml",
-        "source": "/Users/jack/.android/build-cache/3b7be180e8c4aac81ead7517dc6aa9484ad3e170/output/res/layout-v11/notification_media_cancel_action.xml"
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/layout-v11/notification_template_big_media_custom.xml"
     },
     {
-        "merged": "/Users/jack/androidWord/JackZkrt/UiJackDji/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_template_big_media_custom.xml",
-        "source": "/Users/jack/.android/build-cache/3b7be180e8c4aac81ead7517dc6aa9484ad3e170/output/res/layout-v11/notification_template_big_media_custom.xml"
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
     },
     {
-        "merged": "/Users/jack/androidWord/JackZkrt/UiJackDji/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_template_big_media_narrow.xml",
-        "source": "/Users/jack/.android/build-cache/3b7be180e8c4aac81ead7517dc6aa9484ad3e170/output/res/layout-v11/notification_template_big_media_narrow.xml"
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/layout-v11/notification_template_big_media.xml"
     }
 ]

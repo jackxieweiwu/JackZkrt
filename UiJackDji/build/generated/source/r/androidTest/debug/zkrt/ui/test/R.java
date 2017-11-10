@@ -3790,7 +3790,7 @@ containing a value of this type.
         
          */
         public static final int AppBaseTheme=0x7f0900a3;
-        /**  All customizations that are NOT specific to a particular API-level can go here. 
+        /**  Customize your theme here. 
          */
         public static final int AppTheme=0x7f0900a4;
         public static final int Base_AlertDialog_AppCompat=0x7f0900a5;

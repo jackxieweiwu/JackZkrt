@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">Frame</string>
+  <string name="sdk_registration_message">SDK Registration Failed. Please check the bundle ID and your network connectivity</string>
 </resources>

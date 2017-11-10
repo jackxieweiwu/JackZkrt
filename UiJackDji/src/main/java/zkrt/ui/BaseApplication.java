@@ -1,12 +1,9 @@
+/*
 package zkrt.ui;
 
-import android.Manifest;
-import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.jack.frame.core.AbsApplication;
 import com.jack.frame.util.show.T;
@@ -15,16 +12,17 @@ import com.squareup.otto.ThreadEnforcer;
 
 import dji.common.error.DJIError;
 import dji.common.error.DJISDKError;
-import dji.log.DJILog;
 import dji.sdk.base.BaseComponent;
 import dji.sdk.base.BaseProduct;
 import dji.sdk.products.Aircraft;
 import dji.sdk.products.HandHeld;
 import dji.sdk.sdkmanager.DJISDKManager;
 
+*/
 /**
  * Created by jack_xie on 17-11-9.
- */
+ *//*
+
 
 public class BaseApplication extends AbsApplication {
     public static final String TAG = BaseApplication.class.getName();
@@ -142,3 +140,4 @@ public class BaseApplication extends AbsApplication {
     public static class ConnectivityChangeEvent {
     }
 }
+*/
