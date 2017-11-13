@@ -3,6 +3,7 @@ package com.jack.frame.core;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
@@ -45,6 +46,7 @@ public abstract class AbsActivity<VB extends ViewDataBinding> extends AppCompatA
   @Override protected void onCreate(Bundle savedInstanceState) {
     requestWindowFeature(Window.FEATURE_NO_TITLE);
     getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
     super.onCreate(savedInstanceState);
 
     PermissionUtil.checkAndRequestPermissions(AbsActivity.this);

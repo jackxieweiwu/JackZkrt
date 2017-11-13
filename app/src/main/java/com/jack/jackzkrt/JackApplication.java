@@ -1,12 +1,12 @@
 package com.jack.jackzkrt;
 
 
-import com.jack.frame.core.AbsApplication;
+import zkrtdrone.zkrt.com.maplib.info.mapApplication;
 
 /**
  * Created by jack_xie on 17-11-9.
  */
 
-public class JackApplication extends AbsApplication {
+public class JackApplication extends mapApplication {
 
 }

@@ -292,7 +292,7 @@ public class BatteryWidget extends UiBaseFDULDynamicFrameLayoutWidget {
 
     private float getMinVoltage(Object var1) {
         if(var1 != null && var1 instanceof Integer[]) {
-            Integer[] var2 = (Integer[]) var1;
+            Integer[] var2 = (Integer[])((Integer[])var1);
             if(var2.length <= 0) {
                 return 0.0F;
             } else {

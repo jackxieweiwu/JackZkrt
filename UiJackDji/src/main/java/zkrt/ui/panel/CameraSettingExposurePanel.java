@@ -10,7 +10,7 @@ import zkrt.ui.c.a.UiCAC;
 import zkrt.ui.c.b.UiCBP;
 import zkrt.ui.d.UiDA;
 import zkrt.ui.d.UiDL;
-import zkrt.ui.internal.BInterNal.b;
+import zkrt.ui.internal.BInterNal;
 
 /**
  * Created by jack_xie on 17-6-1.
@@ -34,10 +34,10 @@ public class CameraSettingExposurePanel extends UiBaseCFramelayout {
 
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        this.subscription.add(UILibEventBus.getInstance().register(b.class)
-                .observeOn(AndroidSchedulers.mainThread()).subscribe(new Action1<b>() {
+        this.subscription.add(UILibEventBus.getInstance().register(BInterNal.b.class)
+                .observeOn(AndroidSchedulers.mainThread()).subscribe(new Action1<BInterNal.b>() {
                     @Override
-                    public void call(b b) {
+                    public void call(BInterNal.b b) {
                         if(b.a()) {
                             CameraSettingExposurePanel.this.setVisibility(VISIBLE);
                         } else {

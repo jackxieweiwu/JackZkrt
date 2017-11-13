@@ -31,7 +31,7 @@ public final class R {
         public static final int offline_map_special_regions_in_china = 0x7f0c0024;
     }
     public static final class color {
-        public static final int midware_white_half = 0x7f0b0042;
+        public static final int midware_white_half = 0x7f0b0040;
     }
     public static final class drawable {
         public static final int btn_draw_end = 0x7f020060;
@@ -41,13 +41,13 @@ public final class R {
         public static final int btn_lock_selector = 0x7f020064;
         public static final int btn_radio_selector = 0x7f020065;
         public static final int btn_zoom_selector = 0x7f020066;
-        public static final int draw_arrow = 0x7f020094;
-        public static final int draw_route = 0x7f020095;
-        public static final int draw_route_pass = 0x7f020096;
-        public static final int indoorpointing_cannotpass = 0x7f02012c;
-        public static final int indoorpointing_canpass = 0x7f02012d;
-        public static final int radio_checked = 0x7f020156;
-        public static final int radio_unchecked = 0x7f020157;
+        public static final int draw_arrow = 0x7f020095;
+        public static final int draw_route = 0x7f020096;
+        public static final int draw_route_pass = 0x7f020097;
+        public static final int indoorpointing_cannotpass = 0x7f02012d;
+        public static final int indoorpointing_canpass = 0x7f02012e;
+        public static final int radio_checked = 0x7f020157;
+        public static final int radio_unchecked = 0x7f020158;
     }
     public static final class id {
         public static final int dbg_region = 0x7f0d0095;

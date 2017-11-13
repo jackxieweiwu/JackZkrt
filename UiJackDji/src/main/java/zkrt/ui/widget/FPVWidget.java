@@ -18,7 +18,6 @@ import dji.midware.usb.P3.UsbAccessoryService;
 import dji.sdk.airlink.AirLink;
 import dji.sdk.airlink.LightbridgeLink;
 import dji.sdk.base.BaseProduct;
-import dji.sdk.camera.Camera;
 import dji.sdk.camera.VideoFeeder;
 import dji.sdk.codec.DJICodecManager;
 import dji.sdk.sdkmanager.DJISDKManager;
@@ -37,7 +36,7 @@ public class FPVWidget extends UiBaseIView implements TextureView.SurfaceTexture
     protected DJICodecManager codecManager;
     private int videoWidth;
     private int videoHeight;
-    private VideoSource videoSource;
+    private FPVWidget.VideoSource videoSource;
     private ProductKey modeNameKey;
     private boolean isPrimaryVideoFeed;
     private VideoFeeder.VideoDataCallback videoDataCallback;
@@ -58,12 +57,12 @@ public class FPVWidget extends UiBaseIView implements TextureView.SurfaceTexture
 
     }
 
-    public void setVideoSource(VideoSource var1) {
+    public void setVideoSource(FPVWidget.VideoSource var1) {
         this.videoSource = var1;
         this.updateVideoFeed();
     }
 
-    public VideoSource getVideoSource() {
+    public FPVWidget.VideoSource getVideoSource() {
         return this.videoSource;
     }
 
@@ -178,7 +177,7 @@ public class FPVWidget extends UiBaseIView implements TextureView.SurfaceTexture
         this.isPrimaryVideoFeed = var2;
         if(this.videoDataCallback != null && var1 != null) {
             if(this.currentVideoFeed != null && this.currentVideoFeed.getCallback() == this.videoDataCallback) {
-                this.currentVideoFeed.setCallback(null);
+                this.currentVideoFeed.setCallback((VideoFeeder.VideoDataCallback)null);
             }
 
             this.currentVideoFeed = var1;
@@ -194,7 +193,7 @@ public class FPVWidget extends UiBaseIView implements TextureView.SurfaceTexture
     private void enableEXTVideoInputPort(@NotNull LightbridgeLink var1, boolean var2, CommonCallbacks.CompletionCallback var3) {
         Boolean var4 = (Boolean) KeyManager.getInstance().getValue(AirLinkKey.createLightbridgeLinkKey("isEXTVideoInputPortEnabled"));
         if(var4 != null && var4.booleanValue() == var2) {
-            var3.onResult(null);
+            var3.onResult((DJIError)null);
         } else {
             var1.setEXTVideoInputPortEnabled(var2, var3);
         }

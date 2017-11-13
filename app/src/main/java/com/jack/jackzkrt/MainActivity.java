@@ -2,8 +2,10 @@ package com.jack.jackzkrt;
 
 import android.os.Bundle;
 import com.jack.frame.core.AbsActivity;
+import com.jack.frame.core.AbsApplication;
 import com.jack.jackzkrt.fragment.MainFragment;
 import com.jack.jackzkrt.fragment.StartFragment;
+
 import dji.thirdparty.eventbus.EventBus;
 
 
@@ -28,8 +30,8 @@ public class MainActivity extends AbsActivity {
             mainFragment = (MainFragment) getSupportFragmentManager()
                     .getFragment(savedInstanceState, "mainFragment");
         } else {
-            startFragment = startFragment.newInstance();
-            mainFragment = mainFragment.newInstance();
+            startFragment = StartFragment.newInstance();
+            mainFragment = MainFragment.newInstance();
         }
 
         getSupportFragmentManager().beginTransaction()
@@ -43,7 +45,6 @@ public class MainActivity extends AbsActivity {
                     .replace(R.id.framelayout_start, mainFragment)
                     .commit();
         }else{  //open Compass
-
         }
     }
 

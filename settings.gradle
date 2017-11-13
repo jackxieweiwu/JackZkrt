@@ -1,1 +1,1 @@
-include ':app',':jackMvvm'
+include ':app',':jackMvvm',':UiJackDji',':MapLib'

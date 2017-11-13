@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
+        "outputFile": "/Users/jack/androidWord/JackZkrt/UiJackDji/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 117
                 },
                 "from": {
-                    "file": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "file": "/Users/jack/.android/build-cache/3b7be180e8c4aac81ead7517dc6aa9484ad3e170/output/res/values-h720dp-v13/values-h720dp-v13.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

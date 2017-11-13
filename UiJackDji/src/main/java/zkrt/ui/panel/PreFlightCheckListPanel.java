@@ -44,7 +44,7 @@ import zkrt.ui.c.UiCC;
 import zkrt.ui.d.UiDA;
 import zkrt.ui.d.UiDC;
 import zkrt.ui.d.UiDL;
-import zkrt.ui.internal.BInterNal.d;
+import zkrt.ui.internal.BInterNal;
 import zkrt.ui.internal.DInterNal;
 import zkrt.ui.widget.compass.CompassCalibratingWorkFlow;
 
@@ -119,10 +119,10 @@ public class PreFlightCheckListPanel extends UiBasePView {
         this.contentList.setHasFixedSize(true);
         this.contentList.setAdapter(this.adapter);
         this.contentList.setLayoutManager(new LinearLayoutManager(var1));
-        UILibEventBus.getInstance().register(d.class).observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Action1<d>() {
+        UILibEventBus.getInstance().register(BInterNal.d.class).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Action1<BInterNal.d>() {
                     @Override
-                    public void call(d d) {
+                    public void call(BInterNal.d d) {
                         if(PreFlightCheckListPanel.this.getVisibility() == VISIBLE) {
                             PreFlightCheckListPanel.this.setVisibility(GONE);
                         } else {

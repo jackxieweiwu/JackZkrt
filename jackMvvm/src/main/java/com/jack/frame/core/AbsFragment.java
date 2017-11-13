@@ -71,6 +71,7 @@ public abstract class AbsFragment<VB extends ViewDataBinding> extends Fragment
     super.onAttach(context);
     if (context instanceof AbsActivity) {
       mActivity = (AbsActivity) context;
+      AbsApplication.mActivity = mActivity;
     }
   }
 
