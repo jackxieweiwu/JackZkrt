@@ -11,8 +11,8 @@ public class Constanst {
     public static final String IP = "http://192.168.1.132:8080/";
 
     //飞机设置fragment中的值
-    public static  Float fMaxFlightHeight = 0.0f;
-    public static  Float iMaxFlightRadius = 0.0f;
+    public static int fMaxFlightHeight = 0;
+    public static int iMaxFlightRadius = 0;
     public static boolean boolSpeek = true;
     public static float goHome = 0.0f;
     public static String cameraType="";

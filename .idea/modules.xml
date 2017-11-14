@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JackZkrt.iml" filepath="$PROJECT_DIR$/JackZkrt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Jackspinnerlibrary/Jackspinnerlibrary.iml" filepath="$PROJECT_DIR$/Jackspinnerlibrary/Jackspinnerlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/MapLib/MapLib.iml" filepath="$PROJECT_DIR$/MapLib/MapLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/UiJackDji/UiJackDji.iml" filepath="$PROJECT_DIR$/UiJackDji/UiJackDji.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />

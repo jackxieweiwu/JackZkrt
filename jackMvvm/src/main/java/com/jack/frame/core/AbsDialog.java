@@ -88,7 +88,7 @@ public abstract class AbsDialog extends Dialog {
    * 设置资源布局
    */
   protected abstract int setLayoutId();
-
+  protected abstract void init();
   /**
    * 数据回调
    */

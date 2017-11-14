@@ -1,14 +1,14 @@
 [
     {
-        "merged": "/Users/jack/androidWord/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "/Users/jack/.android/build-cache/3b7be180e8c4aac81ead7517dc6aa9484ad3e170/output/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "/Users/jack/androidWord/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
-        "source": "/Users/jack/.android/build-cache/3b7be180e8c4aac81ead7517dc6aa9484ad3e170/output/res/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "/Users/jack/androidWord/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "/Users/jack/.android/build-cache/3b7be180e8c4aac81ead7517dc6aa9484ad3e170/output/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
     }
 ]

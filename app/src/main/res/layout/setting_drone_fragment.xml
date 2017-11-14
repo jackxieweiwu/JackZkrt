@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="strGohomeHiget"
+            type="String"/>
+        <variable
+            name="strHightDrone"
+            type="String"/>
+        <variable
+            name="strDroneRadiusBooleanNumber"
+            type="String"/>
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@color/back_150"
+        android:scrollbars="none"
+        android:padding="@dimen/activity_magin_10">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:layout_marginTop="@dimen/activity_magin_10">
+                <TextView
+                    android:text="返航点设置"
+                    android:textColor="@color/white"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="@dimen/txt_size_18"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!--android:background="@drawable/exit_bg"-->
+                <ImageView
+                    android:id="@+id/img_gohome_setting_peplo"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/activity_magin_5"
+                    android:background="@drawable/camera_map_bg"
+                    android:layout_width="70dip"
+                    android:layout_height="35dip"
+                    android:src="@mipmap/leftmenu_homepoint_rc"/>
+
+                <ImageView
+                    android:id="@+id/img_gohome_setting_drone"
+                    android:layout_toLeftOf="@id/img_gohome_setting_peplo"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/activity_magin_10"
+                    android:background="@drawable/camera_map_bg"
+                    android:layout_width="70dip"
+                    android:layout_height="35dip"
+                    android:padding="@dimen/activity_magin_5"
+                    android:src="@mipmap/leftmenu_homepoint_now"
+                    android:layout_marginRight="@dimen/activity_magin_10" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/go_home_relative"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip">
+
+                    <TextView
+                        android:id="@+id/txt_setting_drone_hight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="返航高度"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_18" />
+
+                    <TextView
+                        android:id="@+id/txt_m"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="M"
+                        android:textColor="@color/white" />
+
+                    <!--<EditText
+                        android:id="@+id/edit_setting_drone_gohome_hight"
+                        android:layout_width="60dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/activity_magin_3"
+                        android:layout_toLeftOf="@id/txt_m"
+                        android:background="@drawable/exit_bg"
+                        android:inputType="numberSigned"
+                        android:text="@{strGohomeHiget}"
+                        android:ems="3"
+                        android:digits="1234567890"
+                        android:singleLine="true"
+                        android:gravity="center"
+                        android:padding="@dimen/activity_magin_2"
+                        android:textColor="@color/Blue_700" />-->
+
+                    <TextView
+                        android:id="@+id/edit_setting_drone_gohome_hight"
+                        android:layout_width="60dip"
+                        android:layout_height="28dip"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/activity_magin_3"
+                        android:layout_toLeftOf="@id/txt_m"
+                        android:background="@drawable/camera_map_bg"
+                        android:inputType="numberSigned"
+                        android:text="@{strGohomeHiget}"
+                        android:ems="3"
+                        android:digits="1234567890"
+                        android:singleLine="true"
+                        android:gravity="center"
+                        android:padding="@dimen/activity_magin_2"
+                        android:textColor="@color/blue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/activity_magin_3"
+                        android:layout_toLeftOf="@id/edit_setting_drone_gohome_hight"
+                        android:text="(20-500M)"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/setting_linear_gohome"
+                    android:layout_below="@id/go_home_relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_margin="@dimen/activity_magin_10"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/setting_ui_flyc_fs_height" />
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="请调整高度将作用于失控返航及主动返航，飞行器将上升到当前设置的最低安全返航高度。"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/relay_fly"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:layout_marginTop="@dimen/activity_magin_10">
+
+                    <TextView
+                        android:id="@+id/txt_rela_flying"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="新手模式"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_18" />
+
+                    <Switch
+                        android:id="@+id/fly_ios"
+                        android:layout_width="55dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:thumb="@mipmap/fpv_switch_ball"
+                        android:background="@mipmap/fpv_switch_bg"
+                        android:layout_marginRight="@dimen/activity_magin_3"
+                        android:layout_marginTop="@dimen/activity_magin_3" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txt_new_fly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/relay_fly"
+                    android:layout_marginTop="@dimen/activity_magin_10"
+                    android:text="新手模式下，飞行器只能在返航点的30米半径范围内飞行，飞行距离限制在50米之内"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_marginTop="@dimen/activity_magin_10">
+
+                <TextView
+                    android:id="@+id/txt_rela_flying_hight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="最大高度限制"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_18" />
+
+                <!--<EditText
+                    android:id="@+id/edit_setting_fly_max_hight"
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_magin_3"
+                    android:background="@drawable/exit_bg"
+                    android:gravity="center"
+                    android:text="@{strHightDrone}"
+                    android:digits="1234567890"
+                    android:ems="3"
+                    android:inputType="numberSigned"
+                    android:singleLine="true"
+                    android:padding="@dimen/activity_magin_2"
+                    android:textColor="@color/Blue_700"
+                    android:layout_alignBottom="@+id/txt_rela_flying_hight"
+                    android:layout_alignParentEnd="true"/>-->
+                <TextView
+                    android:id="@+id/edit_setting_fly_max_hight"
+                    android:layout_width="60dip"
+                    android:layout_height="28dip"
+                    android:layout_marginRight="@dimen/activity_magin_3"
+                    android:background="@drawable/camera_map_bg"
+                    android:gravity="center"
+                    android:text="@{strHightDrone}"
+                    android:digits="1234567890"
+                    android:ems="3"
+                    android:inputType="numberSigned"
+                    android:singleLine="true"
+                    android:padding="@dimen/activity_magin_2"
+                    android:textColor="@color/blue"
+                    android:layout_alignBottom="@+id/txt_rela_flying_hight"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
+
+                <TextView
+                    android:id="@+id/txt_setting_fly_max_hight"
+                    android:layout_width="60dip"
+                    android:layout_height="25dip"
+                    android:layout_marginRight="@dimen/activity_magin_3"
+                    android:background="@drawable/camera_map_bg"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:text="@{strHightDrone}"
+                    android:digits="1234567890"
+                    android:ems="3"
+                    android:inputType="numberSigned"
+                    android:singleLine="true"
+                    android:padding="@dimen/activity_magin_2"
+                    android:textColor="@color/blue"
+                    android:layout_alignBottom="@+id/txt_rela_flying_hight"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/activity_magin_3"
+                    android:layout_toLeftOf="@id/edit_setting_fly_max_hight"
+                    android:text="(20-500M)"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rela_dis"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="@dimen/activity_magin_10">
+                <TextView
+                    android:id="@+id/txt_rela_flying_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="距离限制"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_18" />
+
+                <Switch
+                    android:id="@+id/distance_ios_fly"
+                    android:layout_width="55dp"
+                    android:layout_height="28dp"
+                    android:thumb="@mipmap/fpv_switch_ball"
+                    android:background="@mipmap/fpv_switch_bg"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/activity_magin_3"
+                    android:layout_marginTop="@dimen/activity_magin_3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rela_dis_number"
+                android:layout_marginTop="@dimen/activity_magin_8"
+                android:visibility="visible"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_below="@id/rela_dis"
+                android:layout_width="match_parent"
+                android:layout_height="50dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="限远"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_18" />
+
+                <!--<EditText
+                    android:id="@+id/edit_setting_fly_radius_distance"
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/activity_magin_3"
+                    android:background="@drawable/exit_bg"
+                    android:inputType="numberSigned"
+                    android:digits="1234567890"
+                    android:gravity="center"
+                    android:text="@{strDroneRadiusBooleanNumber}"
+                    android:padding="@dimen/activity_magin_2"
+                    android:textColor="@color/Blue_700" />-->
+                <TextView
+                    android:id="@+id/edit_setting_fly_radius_distance"
+                    android:layout_width="60dip"
+                    android:layout_height="28dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/activity_magin_3"
+                    android:background="@drawable/camera_map_bg"
+                    android:inputType="numberSigned"
+                    android:digits="1234567890"
+                    android:gravity="center"
+                    android:text="@{strDroneRadiusBooleanNumber}"
+                    android:padding="@dimen/activity_magin_2"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/txt_setting_fly_radius_distance"
+                    android:layout_width="60dip"
+                    android:visibility="gone"
+                    android:layout_height="25dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/activity_magin_3"
+                    android:background="@drawable/camera_map_bg"
+                    android:inputType="numberSigned"
+                    android:digits="1234567890"
+                    android:gravity="center"
+                    android:text="@{strDroneRadiusBooleanNumber}"
+                    android:padding="@dimen/activity_magin_2"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:layout_width="75dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/activity_magin_3"
+                    android:ems="4"
+                    android:inputType="numberSigned"
+                    android:singleLine="true"
+                    android:layout_toLeftOf="@id/edit_setting_fly_radius_distance"
+                    android:text="(15-8000M)"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/activity_magin_8"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_below="@id/rela_dis"
+                android:layout_width="match_parent"
+                android:layout_height="50dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="LED"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_18" />
+
+                <Switch
+                    android:id="@+id/distance_ios_led"
+                    android:layout_width="55dp"
+                    android:layout_height="28dp"
+                    android:thumb="@mipmap/fpv_switch_ball"
+                    android:background="@mipmap/fpv_switch_bg"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/activity_magin_3"
+                    android:layout_marginTop="@dimen/activity_magin_3" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_marginBottom="@dimen/activity_magin_10"
+                android:layout_marginTop="@dimen/activity_magin_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="航向锁定"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="@dimen/txt_size_18"/>
+
+                <com.example.jackspinnerlibrary.JackSpinner
+                    android:id="@+id/spinner_heading"
+                    app:ms_background_color = "@color/blue"
+                    app:ms_text_color = "@color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="130dip"
+                    android:layout_height="45dip"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_marginBottom="@dimen/activity_magin_10"
+                android:layout_marginTop="@dimen/activity_magin_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="失控行为"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="@dimen/txt_size_18"/>
+
+                <com.example.jackspinnerlibrary.JackSpinner
+                    android:id="@+id/spinner_outof"
+                    app:ms_background_color = "@color/blue"
+                    app:ms_text_color = "@color/white"
+                    android:layout_width="130dip"
+                    android:layout_height="45dip"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

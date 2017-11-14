@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/image_setting_icon"
+    android:orientation="vertical"
+    android:background="@drawable/ic_checklist_gimbal"
+    android:layout_width="45dip"
+    android:layout_gravity="center"
+    android:layout_height="45dip"/>

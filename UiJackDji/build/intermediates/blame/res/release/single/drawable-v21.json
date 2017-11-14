@@ -1,18 +1,34 @@
 [
     {
-        "merged": "/Users/jack/androidWord/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-v21/abc_edit_text_material.xml",
-        "source": "/Users/jack/.android/build-cache/3b7be180e8c4aac81ead7517dc6aa9484ad3e170/output/res/drawable-v21/abc_edit_text_material.xml"
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/drawable-v21/abc_btn_colored_material.xml"
     },
     {
-        "merged": "/Users/jack/androidWord/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-v21/notification_action_background.xml",
-        "source": "/Users/jack/.android/build-cache/3b7be180e8c4aac81ead7517dc6aa9484ad3e170/output/res/drawable-v21/notification_action_background.xml"
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-v21/avd_show_password.xml",
+        "source": "/root/.android/build-cache/245b8181b255205a22a2f812315f382dfba1682a/output/res/drawable-v21/avd_show_password.xml"
     },
     {
-        "merged": "/Users/jack/androidWord/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-v21/abc_action_bar_item_background_material.xml",
-        "source": "/Users/jack/.android/build-cache/3b7be180e8c4aac81ead7517dc6aa9484ad3e170/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-v21/avd_hide_password.xml",
+        "source": "/root/.android/build-cache/245b8181b255205a22a2f812315f382dfba1682a/output/res/drawable-v21/avd_hide_password.xml"
     },
     {
-        "merged": "/Users/jack/androidWord/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-v21/abc_btn_colored_material.xml",
-        "source": "/Users/jack/.android/build-cache/3b7be180e8c4aac81ead7517dc6aa9484ad3e170/output/res/drawable-v21/abc_btn_colored_material.xml"
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-v21/notification_action_background.xml",
+        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-v21/design_password_eye.xml",
+        "source": "/root/.android/build-cache/245b8181b255205a22a2f812315f382dfba1682a/output/res/drawable-v21/design_password_eye.xml"
+    },
+    {
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-v21/design_bottom_navigation_item_background.xml",
+        "source": "/root/.android/build-cache/245b8181b255205a22a2f812315f382dfba1682a/output/res/drawable-v21/design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-v21/abc_edit_text_material.xml",
+        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/drawable-v21/abc_edit_text_material.xml"
     }
 ]

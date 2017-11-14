@@ -10,4 +10,5 @@ public class PublicStackNUm {
     public static double peploLng=0;
     public static double droneloLat=0;
     public static double droneloLng=0;
+    public static int batteryS = 12;
 }

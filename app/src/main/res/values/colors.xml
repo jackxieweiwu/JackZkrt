@@ -10,11 +10,15 @@
     <color name="blue_light">#ff00d8ff</color>
     <color name="blue_sea">#3f00aeff</color>
     <color name="dark_gray">#80000000</color>
+    <color name="back_150">#BA000000</color>
+    <color name="mask_color">#66000000</color>
     <color name="debug_1">@android:color/holo_red_light</color>
     <color name="debug_2">@android:color/holo_blue_light</color>
     <color name="debug_3">@android:color/holo_green_light</color>
     <color name="debug_4">@android:color/holo_orange_light</color>
     <color name="gray">#ff5e5e5e</color>
+    <color name="disabled_color">#44000000</color>
+    <color name="error_color">#E7492E</color>
     <color name="gray_dark">#00ffffff</color>
     <color name="gray_divider_line">#0affffff</color>
     <color name="gray_highlight">#ffdbdddc</color>

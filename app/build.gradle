@@ -64,4 +64,5 @@ dependencies {
     compile 'com.diogobernardino:williamchart:2.5.0'
     compile project(':UiJackDji')
     compile project(path: ':MapLib')
+    compile project(':Jackspinnerlibrary')
 }

@@ -4,4 +4,5 @@
     <string name="app_name_two">科</string>
     <string name="app_name_three">瑞</string>
     <string name="app_name_four">泰</string>
+    <string name="txt_remote_message">您可自定义遥控器背后的C1,C2按钮，更加便捷地进行飞行操作。</string>
 </resources>

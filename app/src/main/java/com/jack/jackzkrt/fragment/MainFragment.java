@@ -1,18 +1,27 @@
 package com.jack.jackzkrt.fragment;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Gravity;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.FrameLayout;
-import android.widget.TextView;
-
+import android.widget.ListView;
 import com.jack.frame.core.AbsFragment;
 import com.jack.jackzkrt.R;
+import com.jack.jackzkrt.adapter.SettingIconAdapter;
 import com.jack.jackzkrt.databinding.FragmentMainBinding;
+import com.jack.jackzkrt.fragment.setting.BatterySettingFragment;
+import com.jack.jackzkrt.fragment.setting.DroneSettingFragment;
+import com.jack.jackzkrt.fragment.setting.HdSettingFragment;
+import com.jack.jackzkrt.fragment.setting.HolderSettingFragment;
+import com.jack.jackzkrt.fragment.setting.MapSettingFragment;
+import com.jack.jackzkrt.fragment.setting.RemoteSettingFragment;
 import com.jack.jackzkrt.widget.genericdrawerLayout.GenericDrawerLayout;
 import com.jack.jackzkrt.widget.genericdrawerLayout.MaterialMenuButton;
+
+import java.util.Arrays;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -26,6 +35,17 @@ public class MainFragment extends AbsFragment<FragmentMainBinding> {
     private FpvOrMapFragment fpvOrMapFragment;
     @Bind(R.id.genericdrawerlayout) GenericDrawerLayout mGenericDrawerLayout;
     @Bind(R.id.menubtn_right) MaterialMenuButton mMaterialMenuButton;
+    private int[] settingicl = {R.drawable.ic_topbar_flight_mode,R.drawable.ic_topbar_hd_nor,R.drawable.ic_topbar_battery_nor
+            ,R.drawable.ic_topbar_remote_nor,R.drawable.ic_checklist_gimbal,R.drawable.ic_checklist_firmware};
+    private SettingIconAdapter setAdapter;
+
+    //this is setting fragment
+    private DroneSettingFragment droneSettingFragment;
+    private HdSettingFragment hdSettingFragment;
+    private BatterySettingFragment batterySettingFragment;
+    private RemoteSettingFragment remoteSettingFragment;
+    private HolderSettingFragment holderSettingFragment;
+    private MapSettingFragment mapSettingFragment;
 
     public static MainFragment newInstance() {
         return new MainFragment();
@@ -36,28 +56,91 @@ public class MainFragment extends AbsFragment<FragmentMainBinding> {
         if (savedInstanceState != null) {
             fpvOrMapFragment = (FpvOrMapFragment) mActivity.getSupportFragmentManager()
                     .getFragment(savedInstanceState, "StartFragment");
-
+            droneSettingFragment = (DroneSettingFragment) mActivity.getSupportFragmentManager()
+                    .getFragment(savedInstanceState, "DroneSettingFragment");
+            /*hdSettingFragment = (HdSettingFragment) mActivity.getSupportFragmentManager()
+                    .getFragment(savedInstanceState, "DroneSettingFragment");
+            batterySettingFragment = (BatterySettingFragment) mActivity.getSupportFragmentManager()
+                    .getFragment(savedInstanceState, "DroneSettingFragment");
+            remoteSettingFragment = (RemoteSettingFragment) mActivity.getSupportFragmentManager()
+                    .getFragment(savedInstanceState, "DroneSettingFragment");
+            holderSettingFragment = (HolderSettingFragment) mActivity.getSupportFragmentManager()
+                    .getFragment(savedInstanceState, "DroneSettingFragment");
+            mapSettingFragment = (MapSettingFragment) mActivity.getSupportFragmentManager()
+                    .getFragment(savedInstanceState, "DroneSettingFragment");*/
         } else {
             fpvOrMapFragment = FpvOrMapFragment.newInstance();
+            droneSettingFragment = DroneSettingFragment.newInstance();
         }
-
         mActivity.getSupportFragmentManager().beginTransaction()
                 .replace(R.id.frame_map_fpv, fpvOrMapFragment)
                 .commit();
-
         mGenericDrawerLayout.setOpaqueWhenTranslating(true);
         mGenericDrawerLayout.setMaxOpaque(0.6f);
 
-        TextView textView = new TextView(mActivity);
-        textView.setBackgroundColor(Color.parseColor("#00A4A6"));
-        textView.setGravity(Gravity.CENTER);
-        textView.setText("GenericDrawerLayout");
-        textView.setTextSize(22);
-        mGenericDrawerLayout.setContentLayout(textView, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-        // 设置抽屉留白
-        mGenericDrawerLayout.setDrawerEmptySize((int) (getResources().getDisplayMetrics().density * 120 + 0.5f));
-        // 设置不需要自动播放动画，因为抽屉会回调动画的执行
+        View mMenuViewLeft = LayoutInflater.from(mActivity).inflate(R.layout.setting_drone,null);
+        ListView drone_tool_bar = (ListView) mMenuViewLeft.findViewById(R.id.setting_list_icon);
+        setAdapter = new SettingIconAdapter(mActivity, Arrays.asList(settingicl));
+        drone_tool_bar.setAdapter(setAdapter);
+        drone_tool_bar.setOnItemClickListener(onItemClickListener);
+        /*TabLayout drone_tool_bar = (TabLayout) mMenuViewLeft.findViewById(R.id.drone_tool_bar);
+        ViewPager drone_setting_pager = (ViewPager) mMenuViewLeft.findViewById(R.id.drone_setting_pager);*/
+        setSettingFragmentAdd(droneSettingFragment);
+
+        mGenericDrawerLayout.setContentLayout(mMenuViewLeft, new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        mGenericDrawerLayout.setDrawerEmptySize((int) (getResources().getDisplayMetrics().density * 80 + 0.5f));
         mGenericDrawerLayout.setDrawerCallback(mGenericDrawerCallback);
+    }
+
+    //this is setting icon
+    AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            Fragment fragment = null;
+            if(position == 0){
+                if(droneSettingFragment==null){
+                    droneSettingFragment = DroneSettingFragment.newInstance();
+                }
+                fragment = droneSettingFragment;
+            }
+            if(position == 1){
+                if(hdSettingFragment==null){
+                    hdSettingFragment = HdSettingFragment.newInstance();
+                }
+                fragment = hdSettingFragment;
+            }
+            if(position == 2){
+                if(batterySettingFragment==null){
+                    batterySettingFragment = BatterySettingFragment.newInstance();
+                }
+                fragment = batterySettingFragment;
+            }
+            if(position == 3){
+                if(remoteSettingFragment==null){
+                    remoteSettingFragment = RemoteSettingFragment.newInstance();
+                }
+                fragment = remoteSettingFragment;
+            }
+            if(position == 4){
+                if(holderSettingFragment==null){
+                    holderSettingFragment = HolderSettingFragment.newInstance();
+                }
+                fragment = holderSettingFragment;
+            }
+            if(position == 5){
+                if(mapSettingFragment==null){
+                    mapSettingFragment = MapSettingFragment.newInstance();
+                }
+                fragment = mapSettingFragment;
+            }
+            setSettingFragmentAdd(fragment);
+        }
+    };
+
+    private void setSettingFragmentAdd(Fragment fragment){
+        mActivity.getSupportFragmentManager().beginTransaction()
+                .replace(R.id.setting_fragment, fragment)
+                .commit();
     }
 
     @OnClick(R.id.menubtn_right)
@@ -66,7 +149,6 @@ public class MainFragment extends AbsFragment<FragmentMainBinding> {
     }
 
     private GenericDrawerLayout.DrawerCallback mGenericDrawerCallback = new GenericDrawerLayout.DrawerCallbackAdapter() {
-
         @Override
         public void onTranslating(int gravity, float translation, float fraction) {
             super.onTranslating(gravity, translation, fraction);
