@@ -10,6 +10,15 @@ package zkrtdrone.zkrt.com.maplib.info;
 public class Constanst {
     public static final String IP = "http://192.168.1.132:8080/";
 
+    //注册获得信息值
+    public static final String IP_Address= "101.132.107.199";//192.168.1.132
+    public static final String port= "8080";
+    public static final String RegisterIP = "http://"+IP_Address+":"+port+"/";
+    public static final String getLevelHttp="v1/Level_Z/GetLevelDownName/";
+    public static final String registerHttp="v1/BrigadeDrone/AddDroneLevel/";
+    public static final String saveDataNet="v1/DroneMsg_Z/AddDroneMsg/";
+
+
     //飞机设置fragment中的值
     public static int fMaxFlightHeight = 0;
     public static int iMaxFlightRadius = 0;

@@ -2948,13 +2948,14 @@ containing a value of this type.
         public static int text_size_medium=0x7f09009e;
         public static int text_size_normal=0x7f09009f;
         public static int text_size_normal_medium=0x7f0900a0;
-        public static int text_size_small=0x7f0900a1;
-        public static int text_size_tiny=0x7f0900a2;
-        public static int view_simple_marginleft=0x7f0900a3;
-        public static int view_simple_marginright=0x7f0900a4;
-        public static int view_top_max_margin=0x7f0900a5;
-        public static int view_top_mid_margin=0x7f0900a6;
-        public static int view_top_min_margin=0x7f0900a7;
+        public static int text_size_rester_info=0x7f0900a1;
+        public static int text_size_small=0x7f0900a2;
+        public static int text_size_tiny=0x7f0900a3;
+        public static int view_simple_marginleft=0x7f0900a4;
+        public static int view_simple_marginright=0x7f0900a5;
+        public static int view_top_max_margin=0x7f0900a6;
+        public static int view_top_mid_margin=0x7f0900a7;
+        public static int view_top_min_margin=0x7f0900a8;
     }
     public static final class drawable {
         public static int abc_ab_share_pack_mtrl_alpha=0x7f020000;
@@ -4647,15 +4648,7 @@ containing a value of this type.
         public static int Animation_AppCompat_Dialog=0x7f0a00a3;
         public static int Animation_AppCompat_DropDownUp=0x7f0a00a4;
         public static int Animation_Design_BottomSheetDialog=0x7f0a00a5;
-        /** 
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-         */
         public static int AppBaseTheme=0x7f0a00a6;
-        /**  All customizations that are NOT specific to a particular API-level can go here. 
-         */
         public static int AppTheme=0x7f0a00a7;
         public static int Base_AlertDialog_AppCompat=0x7f0a00a8;
         public static int Base_AlertDialog_AppCompat_Light=0x7f0a00a9;

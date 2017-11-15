@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="350dip"
+              android:layout_gravity="center"
+              android:gravity="center"
+              android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_magin_20"
+        android:textSize="18sp"
+        android:text="登记"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="@dimen/activity_magin_10">
+
+        <TextView
+            android:text="总队"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/txt_size_18"
+            android:layout_centerVertical="true"
+            android:paddingLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.example.jackspinnerlibrary.JackSpinner
+            android:id="@+id/level_name_spinner_overall"
+            app:ms_background_color = "@color/blue"
+            app:ms_text_color = "@color/white"
+            android:textColor="@color/back_150"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/txt_size_18"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_width="200dip"
+            android:layout_height="45dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="@dimen/activity_magin_10">
+
+        <TextView
+            android:text="支队"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/txt_size_18"
+            android:layout_centerVertical="true"
+            android:paddingLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.example.jackspinnerlibrary.JackSpinner
+            android:id="@+id/level_name_spinner_detachment"
+            app:ms_background_color = "@color/blue"
+            app:ms_text_color = "@color/white"
+            android:textColor="@color/back_150"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/txt_size_18"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_width="200dip"
+            android:layout_height="45dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="@dimen/activity_magin_10">
+
+        <TextView
+            android:text="大队"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/txt_size_18"
+            android:layout_centerVertical="true"
+            android:paddingLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.example.jackspinnerlibrary.JackSpinner
+            android:id="@+id/level_name_spinner_big"
+            app:ms_background_color = "@color/blue"
+            app:ms_text_color = "@color/white"
+            android:textColor="@color/back_150"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/txt_size_18"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_width="200dip"
+            android:layout_height="45dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="@dimen/activity_magin_10">
+
+        <TextView
+            android:text="中队"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/txt_size_18"
+            android:layout_centerVertical="true"
+            android:paddingLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.example.jackspinnerlibrary.JackSpinner
+            android:id="@+id/level_name_spinner_centre"
+            app:ms_background_color = "@color/blue"
+            app:ms_text_color = "@color/white"
+            android:textColor="@color/back_150"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/txt_size_18"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_width="200dip"
+            android:layout_height="45dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="@dimen/activity_magin_10">
+
+        <TextView
+            android:text="本机机械码"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/txt_size_18"
+            android:layout_centerVertical="true"
+            android:paddingLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:textColor="@color/back_150"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/txt_size_18"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_width="150dip"
+            android:layout_marginRight="20dp"
+            android:inputType="number"
+            android:layout_height="45dip" />
+    </RelativeLayout>
+
+
+
+
+
+
+    <Button
+        android:id="@+id/btn_pk_marker"
+        android:layout_marginTop="@dimen/activity_magin_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/alt_change_bg"/>
+</LinearLayout>

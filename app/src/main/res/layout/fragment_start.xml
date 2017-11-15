@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+
         <variable
             name="btnName"
             type="String" />
@@ -15,19 +15,30 @@
         <com.jack.jackzkrt.launcher.LauncherView
             android:id="@+id/launcherview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_show_register_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:padding="20dip"
+            android:text=" "
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/text_size_rester_info"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/ftb_start"
             android:layout_width="150dip"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="50dip"
-            android:layout_gravity="bottom|center"
             android:layout_height="45dip"
-            android:visibility="visible"
-            android:textColor="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="50dip"
+            android:background="@drawable/round_btn"
             android:text="@{btnName}"
-            android:background="@drawable/round_btn"/>
+            android:textColor="#ffffff"
+            android:visibility="visible" />
     </FrameLayout>
 </layout>

@@ -24,12 +24,12 @@
         "source": "C:\\Users\\jll\\.android\\build-cache\\8e9886e8e9ae0a66fb54f851fe774eac9efea23b\\output\\res\\raw\\iframe_1280x720_p4.h264"
     },
     {
-        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\raw\\iframe_1920x1024_wm620.h264",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\8e9886e8e9ae0a66fb54f851fe774eac9efea23b\\output\\res\\raw\\iframe_1920x1024_wm620.h264"
-    },
-    {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\raw\\camera_ev_center.mp3",
         "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\raw\\camera_ev_center.mp3"
+    },
+    {
+        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\raw\\iframe_1920x1024_wm620.h264",
+        "source": "C:\\Users\\jll\\.android\\build-cache\\8e9886e8e9ae0a66fb54f851fe774eac9efea23b\\output\\res\\raw\\iframe_1920x1024_wm620.h264"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\raw\\shutter_3.mp3",

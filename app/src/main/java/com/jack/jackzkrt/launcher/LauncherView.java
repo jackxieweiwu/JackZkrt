@@ -18,10 +18,13 @@ import android.widget.TextView;
 
 import com.jack.frame.permission.PermissionUtil;
 import com.jack.frame.util.AndroidUtils;
+import com.jack.frame.util.SharePreUtil;
 import com.jack.frame.util.show.T;
 import com.jack.jackzkrt.JackApplication;
 import com.jack.jackzkrt.MainActivity;
 import com.jack.jackzkrt.R;
+import com.jack.jackzkrt.dialog.RegisterDialog;
+import com.jack.jackzkrt.interf.RegisterCallBackIntercace;
 
 import dji.sdk.sdkmanager.DJISDKManager;
 
@@ -83,6 +86,8 @@ public class LauncherView extends RelativeLayout {
 
     ViewPath redPath1, purplePath1, yellowPath1, bluePath1;
 
+    AnimatorListenerAdapter mAnimatorListenerAdapter;
+
     private void initPath() {
         redPath1 = new ViewPath(); //偏移坐标
         redPath1.moveTo(0, 0);
@@ -129,6 +134,10 @@ public class LauncherView extends RelativeLayout {
                 showLogo();
             }
         }, 2650);
+    }
+
+    public void setStartEndListener(AnimatorListenerAdapter animatorListenerAdapter){
+        this.mAnimatorListenerAdapter = animatorListenerAdapter;
     }
 
     private void setAnimation(final ImageView target, ViewPath path1) {
@@ -236,6 +245,13 @@ public class LauncherView extends RelativeLayout {
             public void run() {
                 ObjectAnimator alpha = ObjectAnimator.ofFloat(txt_name_four, View.ALPHA, 0f, 0.6f);
                 alpha.setDuration(200);
+
+                //添加动画执行完成监听，判断用户是否登录
+
+                if (mAnimatorListenerAdapter!=null) {
+                    alpha.addListener(mAnimatorListenerAdapter);
+                }
+
                 alpha.start();
             }
         }, 700);

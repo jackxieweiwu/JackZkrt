@@ -1,94 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
     <com.zhy.android.percent.support.PercentRelativeLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <!--<com.zhy.android.percent.support.PercentFrameLayout-->
-            <!--android:id="@+id/fpv_camera"-->
-            <!--android:layout_alignParentBottom="true"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:layout_width="0dip"-->
-            <!--android:layout_height="0dip"-->
-            <!--app:layout_heightPercent="13.5%w"-->
-            <!--app:layout_widthPercent="24%w">-->
+        <!--android:id="@+id/fpv_camera"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_width="0dip"-->
+        <!--android:layout_height="0dip"-->
+        <!--app:layout_heightPercent="13.5%w"-->
+        <!--app:layout_widthPercent="24%w">-->
 
-            <!--<zkrt.ui.widget.FPVWidget-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"/>-->
+        <!--<zkrt.ui.widget.FPVWidget-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
 
-            <!--<zkrt.ui.widget.FPVOverlayWidget-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent" />-->
+        <!--<zkrt.ui.widget.FPVOverlayWidget-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
         <!--</com.zhy.android.percent.support.PercentFrameLayout>-->
 
         <FrameLayout
+            android:id="@+id/frame_map_fpv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/frame_map_fpv"/>
+            android:layout_height="match_parent" />
 
         <!-- Widgets in top status bar -->
         <com.zhy.android.percent.support.PercentRelativeLayout
             android:id="@+id/signal"
             android:layout_width="match_parent"
             android:layout_height="45dip"
-            android:gravity="center"
-            android:background="@color/dark_gray">
+            android:background="@color/dark_gray"
+            android:gravity="center">
 
             <zkrt.ui.widget.PreFlightStatusWidget
                 android:id="@+id/main_PreFlightStatusWidget"
                 android:layout_width="238dp"
-                app:excludeItem="visionSensors"
-                android:layout_height="25dip"/>
+                android:layout_height="25dip"
+                app:excludeItem="visionSensors" />
 
             <zkrt.ui.widget.FlightModeWidget
                 android:id="@+id/main_FlightModeWidget"
                 android:layout_width="103dip"
-                android:layout_toRightOf="@id/main_PreFlightStatusWidget"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/main_PreFlightStatusWidget" />
 
             <zkrt.ui.widget.GPSSignalWidget
                 android:id="@+id/main_GPSSignalWidget"
-                android:layout_toRightOf="@id/main_FlightModeWidget"
                 android:layout_width="44dip"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="-50dip"
-                android:layout_height="match_parent"/>
+                android:layout_toRightOf="@id/main_FlightModeWidget" />
 
             <zkrt.ui.widget.RemoteControlSignalWidget
                 android:id="@+id/main_RemoteControlSignalWidget"
-                android:layout_toRightOf="@id/main_GPSSignalWidget"
                 android:layout_width="38dip"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/main_GPSSignalWidget" />
 
             <zkrt.ui.widget.VideoSignalWidget
                 android:id="@+id/main_VideoSignalWidget"
-                android:layout_toRightOf="@id/main_RemoteControlSignalWidget"
                 android:layout_width="38dp"
-                android:layout_height="match_parent"/>
-
-            <zkrt.ui.widget.BatteryWidget
-                android:id="@+id/main_BatteryWidget"
-                android:layout_toRightOf="@id/main_VideoSignalWidget"
-                android:layout_width="96dip"
                 android:layout_height="match_parent"
-                app:excludeView="singleVoltage"/>
+                android:layout_toRightOf="@id/main_RemoteControlSignalWidget" />
+
+            <RelativeLayout
+                android:id="@+id/rela_main_BatteryWidget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/main_VideoSignalWidget">
+
+                <zkrt.ui.widget.BatteryWidget
+                    android:id="@+id/main_BatteryWidget"
+                    android:layout_width="96dip"
+                    android:layout_height="match_parent"
+                    app:excludeView="singleVoltage" />
+            </RelativeLayout>
+
 
             <zkrt.ui.widget.ConnectionWidget
-                android:layout_toRightOf="@id/main_BatteryWidget"
-                android:layout_marginTop="3dp"
                 android:layout_width="18dp"
-                android:layout_height="18dp"/>
+                android:layout_height="18dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/rela_main_BatteryWidget" />
 
             <com.jack.jackzkrt.widget.genericdrawerLayout.MaterialMenuButton
-                android:layout_alignParentRight="true"
                 android:id="@+id/menubtn_right"
                 android:layout_width="60dip"
                 android:layout_height="match_parent"
-                android:layout_centerVertical="true"/>
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
 
         </com.zhy.android.percent.support.PercentRelativeLayout>
 
@@ -97,93 +104,93 @@
             android:id="@+id/camera"
             android:layout_width="0dip"
             android:layout_height="0dip"
-            app:layout_heightPercent="3.5%w"
-            app:layout_widthPercent="50%w"
-            android:layout_below="@id/signal"
             android:layout_alignParentRight="true"
+            android:layout_below="@id/signal"
             android:layout_marginTop="2dp"
             android:background="@color/dark_gray"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_heightPercent="3.5%w"
+            app:layout_widthPercent="50%w">
 
             <zkrt.ui.widget.AutoExposureLockWidget
                 android:layout_width="40dp"
-                android:layout_height="40dp"/>
+                android:layout_height="40dp" />
 
             <zkrt.ui.widget.FocusExposureSwitchWidget
                 android:layout_width="40dp"
-                android:layout_height="40dp"/>
+                android:layout_height="40dp" />
 
             <zkrt.ui.widget.FocusModeWidget
                 android:layout_width="40dp"
-                android:layout_height="40dp"/>
+                android:layout_height="40dp" />
 
             <zkrt.ui.widget.config.CameraConfigISOWidget
                 android:layout_width="70dp"
-                android:layout_height="40dp"/>
+                android:layout_height="40dp" />
 
             <zkrt.ui.widget.config.CameraConfigShutterWidget
                 android:layout_width="60dp"
-                android:layout_height="40dp"/>
+                android:layout_height="40dp" />
 
             <zkrt.ui.widget.config.CameraConfigApertureWidget
                 android:layout_width="60dp"
-                android:layout_height="40dp"/>
+                android:layout_height="40dp" />
 
             <zkrt.ui.widget.config.CameraConfigEVWidget
                 android:layout_width="60dp"
-                android:layout_height="40dp"/>
+                android:layout_height="40dp" />
 
             <zkrt.ui.widget.config.CameraConfigWBWidget
                 android:layout_width="70dp"
-                android:layout_height="40dp"/>
+                android:layout_height="40dp" />
 
             <zkrt.ui.widget.CameraConfigStorageWidget
                 android:layout_width="140dp"
-                android:layout_height="40dp"/>
+                android:layout_height="40dp" />
         </com.zhy.android.percent.support.PercentLinearLayout>
 
         <zkrt.ui.widget.ManualFocusWidget
-            android:layout_centerVertical="true"
-            android:layout_alignLeft="@id/camera"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="5dp"
             android:layout_width="42dp"
             android:layout_height="218dp"
-            tools:ignore="RtlHardcoded"/>
+            android:layout_alignLeft="@id/camera"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            tools:ignore="RtlHardcoded" />
 
 
         <zkrt.ui.widget.dashboard.DashboardWidget
             android:id="@+id/Compass"
             android:layout_width="0dip"
+            android:layout_height="0dip"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:layout_height="0dip"
+            android:layout_marginRight="12dp"
             app:layout_heightPercent="8%w"
             app:layout_widthPercent="38%w"
-            android:layout_marginRight="12dp"
-            tools:ignore="RtlHardcoded"/>
+            tools:ignore="RtlHardcoded" />
 
         <!--相机控制界面-->
         <zkrt.ui.widget.controls.CameraControlsWidget
             android:id="@+id/CameraCapturePanel"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             app:layout_heightPercent="20%w"
             app:layout_widthPercent="5%w"
-            tools:ignore="RtlHardcoded"/>
+            tools:ignore="RtlHardcoded" />
 
 
         <zkrt.ui.panel.CameraSettingExposurePanel
             android:layout_width="180dp"
+            android:layout_height="263dp"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/CameraCapturePanel"
             android:background="@color/transparent"
             android:gravity="center"
-            android:layout_height="263dp"
             android:visibility="invisible"
-            tools:ignore="RtlHardcoded"/>
+            tools:ignore="RtlHardcoded" />
 
         <zkrt.ui.panel.CameraSettingAdvancedPanel
             android:layout_width="180dp"
@@ -193,19 +200,19 @@
             android:background="@color/transparent"
             android:gravity="center"
             android:visibility="invisible"
-            tools:ignore="RtlHardcoded"/>
+            tools:ignore="RtlHardcoded" />
 
         <!-- Pre-flight checklist panel -->
         <zkrt.ui.panel.PreFlightCheckListPanel
             android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/signal"
-            app:excludeItem="aircraftBatteryTemperature|ESCStatus"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            app:excludeItem="aircraftBatteryTemperature|ESCStatus" />
 
         <com.jack.jackzkrt.widget.genericdrawerLayout.GenericDrawerLayout
             android:id="@+id/genericdrawerlayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
     </com.zhy.android.percent.support.PercentRelativeLayout>
 </layout>

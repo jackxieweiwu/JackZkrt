@@ -16,12 +16,12 @@
         "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\pic.png"
     },
     {
-        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_photo_mode_timepause_15s.png",
-        "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\ic_photo_mode_timepause_15s.png"
-    },
-    {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_topbar_wifi_level_1.png",
         "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\ic_topbar_wifi_level_1.png"
+    },
+    {
+        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_photo_mode_timepause_15s.png",
+        "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\ic_photo_mode_timepause_15s.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_photo_mode_raw_burst_7.png",
@@ -45,7 +45,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_advanced_more_wb_tungsten.png",
@@ -60,12 +60,12 @@
         "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\ic_topbar_signal_level_0.png"
     },
     {
-        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_photo_mode_shallow_focus.png",
@@ -76,16 +76,16 @@
         "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\ic_topbar_battery_nor.png"
     },
     {
-        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\rectangle_310.png",
-        "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\rectangle_310.png"
+        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\camera_controll_stopintervalphoto_select.png",
+        "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\camera_controll_stopintervalphoto_select.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\camera_controll_stopintervalphoto_select.png",
-        "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\camera_controll_stopintervalphoto_select.png"
+        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\rectangle_310.png",
+        "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\rectangle_310.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_photo_mode_timepause_5s.png",
@@ -93,19 +93,19 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\camera_exposure_mode_setting_background.png",
         "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\camera_exposure_mode_setting_background.png"
     },
     {
-        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_advanced_more_vf_1280x720_25p.png",
-        "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\ic_advanced_more_vf_1280x720_25p.png"
-    },
-    {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\success_icon.png",
         "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\success_icon.png"
+    },
+    {
+        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_advanced_more_vf_1280x720_25p.png",
+        "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\ic_advanced_more_vf_1280x720_25p.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\camera_selected_item_background.png",
@@ -140,12 +140,12 @@
         "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\ic_checklist_firmware.png"
     },
     {
-        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\compass_info_bar_background.png",
-        "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\compass_info_bar_background.png"
-    },
-    {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_photo_mode_raw_burst_3.png",
         "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\ic_photo_mode_raw_burst_3.png"
+    },
+    {
+        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\compass_info_bar_background.png",
+        "source": "E:\\JackZkrt\\UiJackDji\\src\\main\\res\\drawable-xxxhdpi-v4\\compass_info_bar_background.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\camera_controll_aelock_lock.png",
@@ -161,7 +161,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_36dp.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_36dp.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_advanced_more_ps_landscape.png",
@@ -181,11 +181,11 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\camera_exp_press.png",
@@ -193,7 +193,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\camera_controll_stopintervalphoto_nor.png",
@@ -205,7 +205,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_48dp.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_48dp.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\mf_control.png",
@@ -253,7 +253,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_text_select_handle_left_mtrl_light.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\camera_controll_stopvideo_select.png",
@@ -281,7 +281,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\design_ic_visibility.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\bbfeda0bc92aa6668af74213711ff2b6d16c3dfe\\output\\res\\drawable-xxxhdpi-v4\\design_ic_visibility.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\6f162ddfa67e220c4a5368e452ee1a6cc622bac9\\output\\res\\drawable-xxxhdpi-v4\\design_ic_visibility.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_advanced_more_vf_4608x2160_25p.png",
@@ -297,7 +297,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_advanced_more_vf_3840x2160_25p.png",
@@ -353,7 +353,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\video.png",
@@ -393,7 +393,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_16dp.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_16dp.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_advanced_more_vf_1280x720_24p.png",
@@ -469,7 +469,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_compass_home.png",
@@ -489,7 +489,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\m100_horizontal.png",
@@ -541,7 +541,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_ic_star_black_48dp.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_48dp.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\camera_controll_recordvideo_nor.png",
@@ -549,7 +549,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\p4_vertical.png",
@@ -669,7 +669,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\design_ic_visibility_off.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\bbfeda0bc92aa6668af74213711ff2b6d16c3dfe\\output\\res\\drawable-xxxhdpi-v4\\design_ic_visibility_off.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\6f162ddfa67e220c4a5368e452ee1a6cc622bac9\\output\\res\\drawable-xxxhdpi-v4\\design_ic_visibility_off.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_photo_mode_aeb_continuous_7.png",
@@ -721,7 +721,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_ic_star_black_16dp.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_16dp.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\inspire_horizontal.png",
@@ -809,7 +809,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_advanced_more_vf_4096x2160_30p.png",
@@ -825,7 +825,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\video_highlight.png",
@@ -857,7 +857,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_checklist_controler_battery.png",
@@ -865,7 +865,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_topbar_gps_nor.png",
@@ -969,7 +969,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_ic_star_black_36dp.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_36dp.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_checklist_radio_channel_quality.png",
@@ -1017,7 +1017,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_advanced_more_vf_2p7k_24p.png",
@@ -1029,7 +1029,7 @@
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
-        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+        "source": "C:\\Users\\jll\\.android\\build-cache\\85538fd931b9c3a4e876af9bbf7255130bf39d11\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
         "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-xxxhdpi-v4\\ic_topbar_wifi_level_3.png",
