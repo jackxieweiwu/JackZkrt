@@ -2,7 +2,10 @@ package com.jack.jackzkrt.fragment.setting;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -29,7 +32,6 @@ import butterknife.OnClick;
 public class MapSettingFragment extends AbsFragment<SettingMapFragmentBinding> implements MKOfflineMapListener{
     private MKOfflineMap mOffline = null;
     private static final String TAG = "OfflineDemo";
-
 
     @Bind(R.id.state) TextView stateView;
     @Bind(R.id.allcitylist) ListView allCityList;
@@ -84,8 +86,9 @@ public class MapSettingFragment extends AbsFragment<SettingMapFragmentBinding> i
         if (localMapList == null) {
             localMapList = new ArrayList<MKOLUpdateElement>();
         }
-        lAdapter = new LocalMapAdapter(mActivity,localMapList);
-        lAdapter.setOffLineMap(mOffline);
+        //lAdapter = new LocalMapAdapter(mActivity,localMapList);
+        lAdapter = new LocalMapAdapter();
+        //lAdapter.setOffLineMap(mOffline);
         localMapListView.setAdapter(lAdapter);
 
     }
@@ -230,7 +233,7 @@ public class MapSettingFragment extends AbsFragment<SettingMapFragmentBinding> i
 
     /**
      * 离线地图管理列表适配器
-     *//*
+     */
     public class LocalMapAdapter extends BaseAdapter {
         @Override
         public int getCount() {
@@ -282,5 +285,5 @@ public class MapSettingFragment extends AbsFragment<SettingMapFragmentBinding> i
             });
         }
 
-    }*/
+    }
 }

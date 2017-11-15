@@ -17,6 +17,7 @@ import static zkrtdrone.zkrt.com.maplib.info.mapApplication.setEditorListener;
 
 public class FpvOrMapFragment extends AbsFragment implements OnEditorInteraction{
 
+
     public static FpvOrMapFragment newInstance(){
         return new FpvOrMapFragment();
     }

@@ -14,6 +14,7 @@ import zkrt.ui.d.UiDA;
 
 /**
  * Created by jack_xie on 17-6-1.
+ * 判断是否连接
  */
 
 public class ConnectionWidget extends UiBaseQView {

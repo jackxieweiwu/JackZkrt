@@ -1,6 +1,7 @@
-package zkrtdrone.zkrt.com.bean
+package com.jack.jackzkrt.bean
 
-import zkrtdrone.zkrt.com.jackmvvm.util.byteUtil.ToByte
+import com.jack.frame.util.byteUtil.ToByte
+
 
 /**
  * Created by jack_xie on 17-6-6.

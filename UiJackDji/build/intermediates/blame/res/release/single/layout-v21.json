@@ -1,18 +1,18 @@
 [
     {
-        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/layout-v21/notification_template_custom_big.xml",
-        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/layout-v21/notification_template_custom_big.xml"
+        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\layout-v21\\notification_action.xml"
     },
     {
-        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/layout-v21/notification_template_icon_group.xml",
-        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/layout-v21/notification_template_icon_group.xml"
+        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
-        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/layout-v21/notification_action.xml",
-        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/layout-v21/notification_action.xml"
+        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
-        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/layout-v21/notification_action_tombstone.xml",
-        "source": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/layout-v21/notification_action_tombstone.xml"
+        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\layout-v21\\notification_template_icon_group.xml"
     }
 ]

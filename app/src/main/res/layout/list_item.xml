@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_gravity="start|center_vertical"
     android:ellipsize="marquee"
+    android:textColor="@color/white"
     android:gravity="center_vertical"
     android:minHeight="@dimen/ms__item_height"
     android:text="asaa"

@@ -34,7 +34,7 @@ public class MainActivity extends AbsActivity {
             mainFragment = MainFragment.newInstance();
         }
 
-        getSupportFragmentManager().beginTransaction()
+        this.getSupportFragmentManager().beginTransaction()
                 .replace(R.id.framelayout_start, startFragment)
                 .commit();
     }

@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-anydpi-v21/design_ic_visibility.xml",
-        "source": "/root/.android/build-cache/245b8181b255205a22a2f812315f382dfba1682a/output/res/drawable-anydpi-v21/design_ic_visibility.xml"
+        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
+        "source": "C:\\Users\\jll\\.android\\build-cache\\bbfeda0bc92aa6668af74213711ff2b6d16c3dfe\\output\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
     },
     {
-        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/drawable-anydpi-v21/design_ic_visibility_off.xml",
-        "source": "/root/.android/build-cache/245b8181b255205a22a2f812315f382dfba1682a/output/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
+        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\design_ic_visibility.xml",
+        "source": "C:\\Users\\jll\\.android\\build-cache\\bbfeda0bc92aa6668af74213711ff2b6d16c3dfe\\output\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
     }
 ]

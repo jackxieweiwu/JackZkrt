@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-v18/values-v18.xml",
+        "outputFile": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v18\\values-v18.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 99
                 },
                 "from": {
-                    "file": "/root/.android/build-cache/fb3d4c021966d55fab04855fb0e5b0a379e7a03a/output/res/values-v18/values-v18.xml",
+                    "file": "C:\\Users\\jll\\.android\\build-cache\\69ed84c51ddf817ee552b73b845798a984d836eb\\output\\res\\values-v18\\values-v18.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

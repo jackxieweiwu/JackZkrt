@@ -84,7 +84,7 @@ public class SettingEditTextDialog extends AbsDialog {
                     return;
                 }
 
-                float number = Float.parseFloat(name);
+                int number = Integer.parseInt(name);
                 if(number>=mStart && number<=mStop) {
                     mCallBackExitText.exitName(number);
                     dismiss();

@@ -1,8 +1,11 @@
 package com.jack.frame.util;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
+import android.util.DisplayMetrics;
 import android.util.TypedValue;
+import android.view.WindowManager;
 
 /**
  * 常用单位转换的辅助类
@@ -51,5 +54,13 @@ public class DensityUtils {
    */
   public static float px2sp(Context context, float pxVal) {
     return (pxVal / context.getResources().getDisplayMetrics().scaledDensity);
+  }
+
+  public static int getScreenWidth(Context context) {
+    WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+    DisplayMetrics outMetrics = new DisplayMetrics();
+    wm.getDefaultDisplay().getMetrics(outMetrics);
+    int height  = outMetrics.heightPixels;
+    return outMetrics.widthPixels;
   }
 }

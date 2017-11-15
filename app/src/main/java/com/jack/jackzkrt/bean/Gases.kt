@@ -1,4 +1,4 @@
-package zkrtdrone.zkrt.com.bean
+package com.jack.jackzkrt.bean
 
 /**
  * Created by jack_xie on 17-6-7.

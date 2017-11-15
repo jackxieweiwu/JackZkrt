@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/anim-v21/design_bottom_sheet_slide_in.xml",
-        "source": "/root/.android/build-cache/245b8181b255205a22a2f812315f382dfba1682a/output/res/anim-v21/design_bottom_sheet_slide_in.xml"
+        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\jll\\.android\\build-cache\\bbfeda0bc92aa6668af74213711ff2b6d16c3dfe\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
     },
     {
-        "merged": "/home/jack/androidWorks/JackZkrt/UiJackDji/build/intermediates/res/merged/release/anim-v21/design_bottom_sheet_slide_out.xml",
-        "source": "/root/.android/build-cache/245b8181b255205a22a2f812315f382dfba1682a/output/res/anim-v21/design_bottom_sheet_slide_out.xml"
+        "merged": "E:\\JackZkrt\\UiJackDji\\build\\intermediates\\res\\merged\\release\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\jll\\.android\\build-cache\\bbfeda0bc92aa6668af74213711ff2b6d16c3dfe\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
     }
 ]
