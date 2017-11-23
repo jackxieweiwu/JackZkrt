@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relayout_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center|left"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/img_maptype"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_margin="@dimen/activity_magin_3"
+                android:background="@drawable/ground_speed_bg"
+                android:src="@mipmap/gs_map_type"
+                android:visibility="visible" />
+
+            <RadioGroup
+                android:id="@+id/map_type_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:layout_alignBottom="@+id/img_maptype"
+                android:layout_alignTop="@+id/img_maptype"
+                android:layout_toRightOf="@+id/img_maptype"
+                android:background="@drawable/ground_speed_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/activity_magin_10"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/radio_btn_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="普通"
+                    android:textColor="#ffffff" />
+
+                <RadioButton
+                    android:id="@+id/radio_btn_satellite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/activity_magin_10"
+                    android:gravity="center"
+                    android:text="卫星"
+                    android:textColor="#ffffff" />
+            </RadioGroup>
+
+            <ImageButton
+                android:id="@+id/img_location"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_below="@+id/img_maptype"
+                android:layout_margin="@dimen/activity_magin_3"
+                android:background="@drawable/ground_speed_bg"
+                android:src="@mipmap/expanded_gs_locate_trigger_icon" />
+
+            <RadioGroup
+                android:id="@+id/location_map_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:layout_alignBottom="@+id/img_location"
+                android:layout_alignTop="@+id/img_location"
+                android:layout_toRightOf="@+id/img_location"
+                android:background="@drawable/ground_speed_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/activity_magin_10"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/radio_btn_mylocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="自我"
+                    android:textColor="#ffffff" />
+
+                <RadioButton
+                    android:id="@+id/radio_btn_dronelocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/activity_magin_10"
+                    android:gravity="center"
+                    android:text="飞机"
+                    android:textColor="#ffffff" />
+            </RadioGroup>
+
+            <ImageButton
+                android:id="@+id/img_mapzomm_min"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_below="@+id/img_location"
+                android:layout_margin="@dimen/activity_magin_3"
+                android:background="@drawable/ground_speed_bg"
+                android:src="@mipmap/fpv_camera_minus" />
+
+            <ImageButton
+                android:id="@+id/img_mapzomm_max"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_below="@+id/img_mapzomm_min"
+                android:layout_margin="@dimen/activity_magin_3"
+                android:background="@drawable/ground_speed_bg"
+                android:src="@mipmap/fpv_camera_plus" />
+
+            <ImageButton
+                android:id="@+id/img_mappoy_clear"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_below="@+id/img_mapzomm_max"
+                android:layout_margin="@dimen/activity_magin_3"
+                android:background="@drawable/ground_speed_bg"
+                android:src="@mipmap/gs_map_widget_earaser_big1" />
+        </RelativeLayout>
+
+
+        <!--<fragment
+            android:id="@+id/flightActionsFragment"
+            android:layout_toRightOf="@+id/relayout_map"
+            android:name="zkrtdrone.zkrt.com.view.fragment.EditorToolsFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            tools:layout="@layout/fragment_editor_tools"/>-->
+    </RelativeLayout>
+</layout>

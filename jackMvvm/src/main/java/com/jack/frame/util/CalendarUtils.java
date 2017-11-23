@@ -2,10 +2,12 @@ package com.jack.frame.util;
 
 import com.jack.frame.util.show.FL;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * 日历工具类 Create by lyy on 13-7-8.
@@ -295,5 +297,23 @@ public class CalendarUtils {
    */
   public static String getTime() {
     return getNowDataTime().split(" ")[1];
+  }
+
+  public static String getDateTie(){
+    DateFormat formatter = new SimpleDateFormat(TIME_FORMAT, Locale.getDefault());
+    String time = formatter.format(new Date(System.currentTimeMillis()));
+    return time;
+  }
+
+  public static String getTimeDate(){
+    DateFormat formatter = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss_SSSS", Locale.getDefault());
+    String time = formatter.format(new Date(System.currentTimeMillis()));
+    return time;
+  }
+
+  public static String getTimeDate2(){
+    DateFormat formatter = new SimpleDateFormat("yyyy_MM_dd", Locale.getDefault());
+    String time = formatter.format(new Date(System.currentTimeMillis()));
+    return time;
   }
 }

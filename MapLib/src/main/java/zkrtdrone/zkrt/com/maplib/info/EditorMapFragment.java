@@ -2,6 +2,7 @@ package zkrtdrone.zkrt.com.maplib.info;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -129,6 +130,11 @@ public class EditorMapFragment extends DroneMap implements DPmap.OnMapLongClickL
         }
     }
 
+    /**
+     * 设置飞机覆盖物
+     *
+     * @param attitude
+     */
     public void setDroneBitmap(Attitude attitude) {
         if(attitude == null ) return;
         if(mMapFragment ==null) return;

@@ -39,9 +39,11 @@ public class SettingIconAdapter extends AbsLvAdapter<Integer,SettingIconAdapter.
     public void bindData(int position, SettingIconHolder holder, Integer item) {
         holder.image_setting_icon.setBackgroundResource(item);
         if(indexNUm == position){
-            holder.frame_icon_bg.setBackgroundColor(R.color.transparent);
+            holder.frame_icon_bg.setBackgroundResource(R.color.blue);
+//            holder.frame_icon_bg.setBackgroundColor(R.color.transparent);
         }else{
-            holder.frame_icon_bg.setBackgroundColor(R.color.blue);
+            holder.frame_icon_bg.setBackgroundResource(R.color.transparent);
+//            holder.frame_icon_bg.setBackgroundColor(R.color.blue);
         }
     }
 

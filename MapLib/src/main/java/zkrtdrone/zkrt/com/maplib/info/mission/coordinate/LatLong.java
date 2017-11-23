@@ -13,6 +13,7 @@ import java.io.Serializable;
 public class LatLong implements Parcelable, Serializable {
     /**
      * Stores latitude, and longitude in degrees
+     * 维度与经度
      */
     private double latitude;
     private double longitude;

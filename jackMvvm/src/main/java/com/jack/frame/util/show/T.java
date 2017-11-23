@@ -59,4 +59,8 @@ public class T {
   public static void show(Context context, int message, int duration) {
     if (isShow) Toast.makeText(context, message, duration).show();
   }
+
+  public static void show(Context context, String message) {
+    if (isShow) Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+  }
 }

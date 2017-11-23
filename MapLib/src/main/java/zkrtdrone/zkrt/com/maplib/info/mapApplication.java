@@ -13,6 +13,7 @@ import zkrtdrone.zkrt.com.maplib.info.mission.MissionProxy;
 public class mapApplication extends BaseApplication {
     private static MissionProxy missionProxy;
     private static OnEditorInteraction editorListener;
+    public static boolean bool = false;
 
     @Override
     protected void initView() {

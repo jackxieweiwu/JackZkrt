@@ -9,9 +9,11 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
@@ -72,10 +74,10 @@ import static com.jack.frame.PublicStackNUm.peploLat;
 import static com.jack.frame.PublicStackNUm.peploLng;
 import static java.lang.Float.NaN;
 
-public class BaiduMapFragment extends SupportMapFragment implements DPmap,SensorEventListener {
+public class BaiduMapFragment extends SupportMapFragment implements DPmap, SensorEventListener {
     private static final String TAG = BaiduMapFragment.class.getSimpleName();
     boolean isFirstLoc = true; // 是否首次定位
-    private static final float GO_TO_MY_LOCATION_ZOOM = 19f;
+    private static final float GO_TO_MY_LOCATION_ZOOM = 19f; //定位我的地址的缩放级别
     private SensorManager mSensorManager;
     private final HashBiMap<MarkerInfo, Marker> mBiMarkersMap = new HashBiMap<MarkerInfo, Marker>();
     private MapView mMapView;
@@ -88,7 +90,7 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
     private DPmap.OnMapLongClickListener mMapLongClickListener;
     private DPmap.OnMarkerClickListener mMarkerClickListener;
     private DPmap.OnMarkerDragListener mMarkerDragListener;
-    protected boolean useMarkerClickAsMapClick = false;
+    protected boolean useMarkerClickAsMapClick = false; //是否使用地图上的覆盖物作为地图的点击事件
     private List<Polygon> polygonsPaths = new ArrayList<Polygon>();
     private Polygon footprintPoly;
     private LocationClient mLocClient;
@@ -100,7 +102,7 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
     private float mCurrentAccracy;
     private int mCurrentDirection = 0;
     private MyLocationData locData;
-    private CoordinateConverter converter  = new CoordinateConverter();
+    private CoordinateConverter converter = new CoordinateConverter();
     private RotateImageView rotateImageView;
     private View viewDrone;
     protected BaseApplication dpApp;
@@ -155,10 +157,9 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
                 }
             }
         });
-
+        //设置地图覆盖物监听
         getBaiduMap().setOnMarkerClickListener(new BaiduMap.OnMarkerClickListener() {
-            public boolean onMarkerClick(Marker marker)
-            {
+            public boolean onMarkerClick(Marker marker) {
                 if (useMarkerClickAsMapClick) {
                     onMapClickListener.onMapClick(marker.getPosition());
                     return true;
@@ -170,26 +171,26 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
             }
         });
 
+        //设置覆盖物的拖拽事件
         getBaiduMap().setOnMarkerDragListener(new BaiduMap.OnMarkerDragListener() {
-            public void onMarkerDrag(Marker marker)
-            {
+            //拖拽过程
+            public void onMarkerDrag(Marker marker) {
                 if (mMarkerDragListener != null) {
                     final MarkerInfo markerInfo = mBiMarkersMap.getKey(marker);
                     markerInfo.setPosition((DroneHelper.BaiduLatLngToCoord(marker.getPosition())));
                     mMarkerDragListener.onMarkerDrag(markerInfo);
                 }
             }
-            public void onMarkerDragStart(Marker marker)
-            {
+            //拖拽开始
+            public void onMarkerDragStart(Marker marker) {
                 if (mMarkerDragListener != null) {
                     final MarkerInfo markerInfo = mBiMarkersMap.getKey(marker);
                     markerInfo.setPosition((DroneHelper.BaiduLatLngToCoord(marker.getPosition())));
                     mMarkerDragListener.onMarkerDragStart(markerInfo);
                 }
             }
-
-            public void  onMarkerDragEnd(Marker marker)
-            {
+            //拖拽结束
+            public void onMarkerDragEnd(Marker marker) {
                 if (mMarkerDragListener != null) {
                     final MarkerInfo markerInfo = mBiMarkersMap.getKey(marker);
                     markerInfo.setPosition((DroneHelper.BaiduLatLngToCoord(marker.getPosition())));
@@ -202,22 +203,35 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
         if (args != null) {
             maxFlightPathSize = args.getInt(EXTRA_MAX_FLIGHT_PATH_SIZE);
         }
-        updateCamera(new LatLong(30.3250427246094,120.063011169434), GO_TO_MY_LOCATION_ZOOM);
+        updateCamera(new LatLong(30.3250427246094, 120.063011169434), GO_TO_MY_LOCATION_ZOOM);
         mMapView = getMapView();
         mapType(BaiduMap.MAP_TYPE_NORMAL);
 
         mMapView = getMapView();
+        //设置是否允许定位图层
         getBaiduMap().setMyLocationEnabled(true);
+        //设置是否允许指南针
         getBaiduMap().getUiSettings().setCompassEnabled(true);
+
+        //设置是否允许俯视手势
+        getBaiduMap().getUiSettings().setOverlookingGesturesEnabled(false);
+
         mMapView.removeViewAt(1);
+        //设置是否显示缩放控件
         mMapView.showZoomControls(false);
+        //设置是否显示比例尺控件
         mMapView.showScaleControl(false);
+
+        //设置卫星图
         getBaiduMap().setMapType(BaiduMap.MAP_TYPE_SATELLITE);
+        //设置是否允许定位图层
         getBaiduMap().setMyLocationEnabled(true);
+        //初始定位监听
         mLocClient = new LocationClient(getActivity());
         mLocClient.registerLocationListener(myListener);
         LocationClientOption option = new LocationClientOption();
         option.setOpenGps(true);// 打开gps
+        //定位SDK默认输出GCJ02坐标，地图SDK默认输出BD09ll
         option.setCoorType("bd09ll"); // 设置坐标类型
         option.setScanSpan(1000);
         mLocClient.setLocOption(option);
@@ -232,14 +246,14 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
 
     @Override
     public void onPause() {
-        if(mMapView != null)
+        if (mMapView != null)
             mMapView.onPause();
         super.onPause();
     }
 
     @Override
     public void onResume() {
-        if(mMapView != null)
+        if (mMapView != null)
             mMapView.onResume();
         super.onResume();
         //为系统的方向传感器注册监听器
@@ -298,7 +312,7 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
     @Override
     public LatLong getMapCenter() {
         return DroneHelper.BaiduLatLngToCoord(getBaiduMap().getMapStatus().target);
-       // return new LatLng(getBaiduMap().getMapStatus().target.latitude,getBaiduMap().getMapStatus().target.longitude);
+        // return new LatLng(getBaiduMap().getMapStatus().target.latitude,getBaiduMap().getMapStatus().target.longitude);
     }
 
     @Override
@@ -329,39 +343,40 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
                 mdFlightPathList.remove(0);
             }
             mdFlightPathList.add(position);
-            if (mdFlightPathList.size() <2){
-                if(flightPath != null)
-                {
+            if (mdFlightPathList.size() < 2) {
+                if (flightPath != null) {
                     flightPath.remove();
                     flightPath = null;
                 }
                 return;
             }
             if (flightPath == null) {
-                PolylineOptions  flightPathOptions = new PolylineOptions()
+                PolylineOptions flightPathOptions = new PolylineOptions()
                         .color(FLIGHT_PATH_DEFAULT_COLOR)
                         .width(FLIGHT_PATH_DEFAULT_WIDTH).zIndex(1);
 
                 flightPathOptions.points(mdFlightPathList);
-                flightPath = (Polyline)getBaiduMap().addOverlay(flightPathOptions);
+                flightPath = (Polyline) getBaiduMap().addOverlay(flightPathOptions);
             }
             flightPath.setPoints(mdFlightPathList);
         }
     }
 
-    private int numberColour=-1;
+    private int numberColour = -1;
+
     public void setDroneMap(Attitude attitude) {
-        if(droneloLat == NaN) return;
-        if(getBaiduMap() ==null) return;
+        if (droneloLat == NaN) return;
+        if (getBaiduMap() == null) return;
         rotateImageView.setAttitude(attitude.yaw);
         //坐标转换
-        converter.coord(new LatLng(droneloLat,droneloLng));
+        //converter.coord(new LatLng(droneloLat, droneloLng));
+        converter.coord(new LatLng(0, 0));
         BitmapDescriptor bitmap = BitmapDescriptorFactory.fromBitmap(loadBitmapFromView());
         OverlayOptions option = new MarkerOptions()
                 .position(converter.convert())
                 .icon(bitmap);
-        if(markerDroneBit !=null) markerDroneBit.remove();
-        markerDroneBit = (Marker)getBaiduMap().addOverlay(option);
+        if (markerDroneBit != null) markerDroneBit.remove();
+        markerDroneBit = (Marker) getBaiduMap().addOverlay(option);
         randomList.add(converter.convert());
         numberColour++;
         /*if(numberColour>5 && randomList.size()>0){
@@ -371,11 +386,12 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
     }
 
     //设置渐变颜色起始值
-    private float[] DEFAULT_GRADIENT_START_POINTS = { 0.2f, 1f };
-    private int ColorRs =  Color.rgb(255, 0, 0);
+    private float[] DEFAULT_GRADIENT_START_POINTS = {0.2f, 1f};
+    private int ColorRs = Color.rgb(255, 0, 0);
     private HeatMap heatmap;
+
     //添加毒气地图色彩
-    private void setColour(){
+    private void setColour() {
         /*String Co2NumerStr = SharePreUtil.getString("Gams", mActivity, "StrCO2").trim();
         if(Co2NumerStr.equals("") || Co2NumerStr == "") return;
         if(coNumber>Integer.parseInt(Co2NumerStr)){
@@ -385,7 +401,7 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
             ColorRs = Color.rgb(255, 255, 0);
         }*/
         //设置渐变颜色值
-        int[] DEFAULT_GRADIENT_COLORS = {Color.rgb(102, 225,  0), ColorRs };
+        int[] DEFAULT_GRADIENT_COLORS = {Color.rgb(102, 225, 0), ColorRs};
         //构造颜色渐变对象
         final Gradient gradient = new Gradient(DEFAULT_GRADIENT_COLORS, DEFAULT_GRADIENT_START_POINTS);
         //在大量热力图数据情况下，build过程相对较慢，建议放在新建线程实现
@@ -447,16 +463,16 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
         final Bitmap markerIcon = markerInfo.getIcon(getResources());
         if (markerIcon != null) {
             markerOptions.icon(BitmapDescriptorFactory.fromBitmap(markerIcon));
-        }else{
+        } else {
             markerOptions.icon(BitmapDescriptorFactory
                     .fromResource(R.drawable.ic_marker_white));
         }
-        if(markerOptions == null || getBaiduMap()==null) return;
+        if (markerOptions == null || getBaiduMap() == null) return;
         Marker marker = (Marker) getBaiduMap().addOverlay(markerOptions);
         mBiMarkersMap.put(markerInfo, marker);
     }
 
-    private void updateMarker(Marker marker, MarkerInfo markerInfo, LatLng position,boolean isDraggable) {
+    private void updateMarker(Marker marker, MarkerInfo markerInfo, LatLng position, boolean isDraggable) {
         final Bitmap markerIcon = markerInfo.getIcon(getResources());
         if (markerIcon != null) {
             marker.setIcon(BitmapDescriptorFactory.fromBitmap(markerIcon));
@@ -548,13 +564,14 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
         mMarkerClickListener = listener;
     }
 
-    private void updateCamera(final LatLong coord){
-        if(coord != null){
+    private void updateCamera(final LatLong coord) {
+        if (coord != null) {
             final float zoomLevel = getBaiduMap().getMapStatus().zoom;
             getBaiduMap().animateMapStatus(MapStatusUpdateFactory.newLatLngZoom(DroneHelper.CoordToBaiduLatLang(coord), zoomLevel));
         }
     }
 
+    //以动画的形式更新地图状态
     @Override
     public void updateCamera(final LatLong coord, final float zoomLevel) {
         if (coord != null) {
@@ -578,8 +595,8 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
             pathPoints.add(DroneHelper.CoordToBaiduLatLang(coord));
         }
 
-        if (pathPoints.size() <2){
-            if(mDroneLeashPath != null){
+        if (pathPoints.size() < 2) {
+            if (mDroneLeashPath != null) {
                 mDroneLeashPath.remove();
                 mDroneLeashPath = null;
             }
@@ -592,7 +609,7 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
                     DroneHelper.scaleDpToPixels(DRONE_LEASH_DEFAULT_WIDTH,
                             getResources()));
             flightPath.points(pathPoints);
-            mDroneLeashPath = (Polyline)getBaiduMap().addOverlay(flightPath);
+            mDroneLeashPath = (Polyline) getBaiduMap().addOverlay(flightPath);
         }
         mDroneLeashPath.setPoints(pathPoints);
     }
@@ -604,8 +621,8 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
         for (LatLong coord : pathCoords) {
             pathPoints.add(DroneHelper.CoordToBaiduLatLang(coord));
         }
-        if (pathPoints.size() <2){
-            if(missionPath != null){
+        if (pathPoints.size() < 2) {
+            if (missionPath != null) {
                 missionPath.remove();
                 missionPath = null;
             }
@@ -616,7 +633,7 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
             pathOptions.color(MISSION_PATH_DEFAULT_COLOR).width(
                     MISSION_PATH_DEFAULT_WIDTH);
             pathOptions.points(pathPoints);
-            missionPath = (Polyline)getBaiduMap().addOverlay(pathOptions);
+            missionPath = (Polyline) getBaiduMap().addOverlay(pathOptions);
         }
         missionPath.setPoints(pathPoints);
     }
@@ -629,27 +646,27 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
 
         for (List<LatLong> contour : paths) {
             PolygonOptions pathOptions = new PolygonOptions();
-            pathOptions.stroke(new Stroke(POLYGONS_PATH_DEFAULT_WIDTH,POLYGONS_PATH_DEFAULT_COLOR));
+            pathOptions.stroke(new Stroke(POLYGONS_PATH_DEFAULT_WIDTH, POLYGONS_PATH_DEFAULT_COLOR));
             final List<LatLng> pathPoints = new ArrayList<LatLng>(contour.size());
             for (LatLong coord : contour) {
                 pathPoints.add(DroneHelper.CoordToBaiduLatLang(coord));
             }
             pathOptions.points(pathPoints);
-            polygonsPaths.add((Polygon)getBaiduMap().addOverlay(pathOptions));
+            polygonsPaths.add((Polygon) getBaiduMap().addOverlay(pathOptions));
         }
     }
 
     @Override
     public void addCameraFootprint(FootPrint footprintToBeDraw) {
-       PolygonOptions pathOptions = new PolygonOptions();
-       pathOptions.stroke(new Stroke(FOOTPRINT_DEFAULT_WIDTH,FOOTPRINT_DEFAULT_COLOR));
-       pathOptions.fillColor(FOOTPRINT_FILL_COLOR);
-       final List<LatLng> pathPoints = new ArrayList<LatLng>();
-       for (LatLong vertex : footprintToBeDraw.getVertexInGlobalFrame()) {
+        PolygonOptions pathOptions = new PolygonOptions();
+        pathOptions.stroke(new Stroke(FOOTPRINT_DEFAULT_WIDTH, FOOTPRINT_DEFAULT_COLOR));
+        pathOptions.fillColor(FOOTPRINT_FILL_COLOR);
+        final List<LatLng> pathPoints = new ArrayList<LatLng>();
+        for (LatLong vertex : footprintToBeDraw.getVertexInGlobalFrame()) {
             pathPoints.add(DroneHelper.CoordToBaiduLatLang(vertex));
-       }
-       pathOptions.points(pathPoints);
-       getBaiduMap().addOverlay(pathOptions);
+        }
+        pathOptions.points(pathPoints);
+        getBaiduMap().addOverlay(pathOptions);
     }
 
     @Override
@@ -709,7 +726,7 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
     @Override
     public void goToMyLocation() {
         MyLocationData locationData = getBaiduMap().getLocationData();
-        if(locationData != null)
+        if (locationData != null)
             updateCamera(DroneHelper.BDLocationToCoord(locationData), GO_TO_MY_LOCATION_ZOOM);
     }
 
@@ -717,10 +734,10 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
     public void goToDroneLocation() {
         final float currentZoomLevel = getBaiduMap().getMapStatus().zoom;
         // sourceLatLng待转换坐标
-        if(droneloLat == NaN) return;
+        if (droneloLat == NaN) return;
         /*converter.coord(new LatLng(droneloLat,droneloLng));
         LatLng desLatLng = converter.convert();*/
-        updateCamera(new LatLong(droneloLat,droneloLng), (int) currentZoomLevel);
+        updateCamera(new LatLong(droneloLat, droneloLng), (int) currentZoomLevel);
     }
 
     private LatLngBounds getBounds(List<LatLng> pointsList) {
@@ -740,14 +757,14 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
     public void updateRealTimeFootprint(FootPrint footprint) {
         if (footprintPoly == null) {
             PolygonOptions pathOptions = new PolygonOptions();
-            pathOptions.stroke(new Stroke(FOOTPRINT_DEFAULT_WIDTH,FOOTPRINT_DEFAULT_COLOR));
+            pathOptions.stroke(new Stroke(FOOTPRINT_DEFAULT_WIDTH, FOOTPRINT_DEFAULT_COLOR));
             pathOptions.fillColor(FOOTPRINT_FILL_COLOR);
             final List<LatLng> pathPoints = new ArrayList<LatLng>();
             for (LatLong vertex : footprint.getVertexInGlobalFrame()) {
                 pathPoints.add(DroneHelper.CoordToBaiduLatLang(vertex));
             }
             pathOptions.points(pathPoints);
-            footprintPoly = (Polygon)getBaiduMap().addOverlay(pathOptions);
+            footprintPoly = (Polygon) getBaiduMap().addOverlay(pathOptions);
         } else {
             List<LatLng> list = new ArrayList<LatLng>();
             for (LatLong vertex : footprint.getVertexInGlobalFrame()) {
@@ -757,6 +774,7 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
         }
     }
 
+    //传感器方向改变
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
         double x = sensorEvent.values[SensorManager.DATA_X];
@@ -795,7 +813,7 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
             LatLong latlong = DroneHelper.BDLocationToCoord(locData);
             if (isFirstLoc) {
                 isFirstLoc = false;
-                LatLng ll = new LatLng(location.getLatitude(),location.getLongitude());
+                LatLng ll = new LatLng(location.getLatitude(), location.getLongitude());
                 MapStatus.Builder builder = new MapStatus.Builder();
                 builder.target(ll).zoom(19f);
                 getBaiduMap().animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
@@ -806,7 +824,7 @@ public class BaiduMapFragment extends SupportMapFragment implements DPmap,Sensor
             }
 
             if (mLocationListener != null) {
-                Location loc = new Location(new Coord2D(latlong.getLatitude(),latlong.getLongitude()),locData.direction,locData.speed,locData.satellitesNum>3);
+                Location loc = new Location(new Coord2D(latlong.getLatitude(), latlong.getLongitude()), locData.direction, locData.speed, locData.satellitesNum > 3);
                 mLocationListener.onLocationChanged(loc);
             }
         }

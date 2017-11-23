@@ -1,10 +1,11 @@
 package zkrtdrone.zkrt.com.bean
 
+import org.litepal.crud.DataSupport
+
 
 /**
  * Created by jack_xie on 17-8-22.
  */
-/*
 class exelBean : DataSupport {
     var lat: Double = 0.toDouble()
     var log: Double = 0.toDouble()
@@ -54,4 +55,4 @@ class exelBean : DataSupport {
                 ", alt=" + alt +
                 '}'
     }
-}*/
+}

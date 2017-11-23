@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_joystick"
+    android:orientation="vertical"
+    android:layout_width="390dip"
+    android:layout_gravity="center"
+    android:visibility="gone"
+    android:layout_height="278dip">
+
+    <com.jack.jackzkrt.widget.JoystickView
+        android:id="@+id/joystick_mount"
+        android:layout_centerInParent="true"
+        android:layout_width="160dip"
+        android:layout_marginBottom="30dip"
+        android:layout_height="160dip"/>
+
+    <ImageButton
+        android:id="@+id/img_camera_video_mount"
+        android:layout_width="50dip"
+        android:layout_margin="@dimen/activity_magin_5"
+        android:layout_height="50dip"
+        android:layout_centerVertical="true"
+        android:background="@drawable/btn_cam_capture_released"/>
+
+    <Switch
+        android:layout_above="@+id/img_camera_video_mount"
+        android:id="@+id/switch_mount_photo_video"
+        android:layout_width="wrap_content"
+        android:thumb="@mipmap/fpv_switch_ball"
+        android:background="@mipmap/fpv_switch_bg"
+        android:layout_margin="@dimen/activity_magin_5"
+        android:layout_height="20dip"/>
+
+    <SeekBar
+        android:id="@+id/seekbar_mount"
+        android:progressDrawable="@color/red"
+        android:max="100"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/joystick_mount"
+        android:layout_marginBottom="@dimen/activity_magin_20"
+        android:thumb="@drawable/thumb_image"
+        android:layout_width="280dip"
+        android:layout_height="5dip"/>
+
+    <TextView
+        android:layout_toLeftOf="@+id/seekbar_mount"
+        android:layout_marginRight="@dimen/activity_magin_3"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_magin_17"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:text="缩小"/>
+
+    <TextView
+        android:layout_toRightOf="@+id/seekbar_mount"
+        android:layout_marginLeft="@dimen/activity_magin_3"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_magin_17"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="放大"/>
+
+    <ImageView
+        android:id="@+id/img_joystick_mount_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@mipmap/fpv_camera_close"/>
+</RelativeLayout>

@@ -17,16 +17,35 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <TextView
-            android:id="@+id/tv_show_register_info"
+        <LinearLayout
+            android:id="@+id/linear_register_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dip"
-            android:padding="20dip"
-            android:text=" "
-            android:textColor="@color/dark_gray"
-            android:textSize="@dimen/text_size_rester_info"
-            android:visibility="gone" />
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_show_register_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:padding="15dip"
+                android:text=""
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/txt_size_20"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_register_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_show_register_info"
+                android:layout_marginLeft="15dip"
+                android:paddingLeft="15dip"
+                android:text=" "
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/txt_size_20"
+                android:visibility="visible" />
+        </LinearLayout>
+
 
         <Button
             android:id="@+id/ftb_start"

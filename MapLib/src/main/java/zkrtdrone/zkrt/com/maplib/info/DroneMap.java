@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -98,6 +99,7 @@ public abstract class DroneMap extends Fragment {
         if (mMapFragment == null || mMapFragment.getProvider() != mapProvider) {
             final Bundle mapArgs = new Bundle();
             mapArgs.putInt(DPmap.EXTRA_MAX_FLIGHT_PATH_SIZE, getMaxFlightPathSize());
+            //new BaiduMapFragment(),传递超过最大飞行尺寸，目前为0
             mMapFragment = mapProvider.getMapFragment();
             ((Fragment) mMapFragment).setArguments(mapArgs);
             fm.beginTransaction().replace(R.id.map_fragment_container, (Fragment) mMapFragment)
@@ -121,18 +123,32 @@ public abstract class DroneMap extends Fragment {
 
     /**
      * Move the map to the user location.
+     * 定位显示自己的中心点
      */
     public void goToMyLocation() {
         mMapFragment.goToMyLocation();
     }
 
+    /**
+     * 切换地图类型
+     * MAP_TYPE_NORMAL	普通地图（包含3D地图）   1
+       MAP_TYPE_SATELLITE	卫星图             2
+       MAP_TYPE_NONE	空白地图               3
+     * @param i
+     */
     public void goTomapType(int i) {
         mMapFragment.mapType(i);
     }
 
+    /**
+     * 设置自动驾驶模式
+     * @param target
+     * @return
+     */
     public abstract boolean setAutoPanMode(AutoPanMode target);
     /**
      * Move the map to the drone location.
+     * 定位置无人机位置 ...
      */
     public void goToDroneLocation() {
         mMapFragment.goToDroneLocation();
@@ -147,7 +163,9 @@ public abstract class DroneMap extends Fragment {
         mMapFragment.clearMarkers();
         mMapFragment.clearFlightPath();
     }
-
+    public void setBaidumapZoom(MapStatusUpdate mapStatusUpdate){
+        mMapFragment.setZoomStates(mapStatusUpdate);
+    }
     /**
      * Update the map rotation.
      *

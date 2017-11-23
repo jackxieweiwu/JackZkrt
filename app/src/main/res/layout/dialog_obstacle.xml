@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="350dip"
+              android:layout_gravity="center"
+              android:gravity="center"
+              android:layout_height="280dip">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_magin_20"
+        android:textSize="18sp"
+        android:text="壁障参数设置"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_marginRight="@dimen/activity_magin_5"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否避障:"/>
+
+        <Switch
+            android:layout_marginLeft="@dimen/activity_magin_10"
+            android:id="@+id/switch_obstacle_dialog"
+            android:layout_width="55dip"
+            android:layout_height="28dip"
+            android:background="@mipmap/fpv_switch_bg"
+            android:thumb="@mipmap/fpv_switch_ball"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_cm_dialog"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="45dip"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="避障生效距离(cm)："/>
+
+        <EditText
+            android:id="@+id/edit_obstacl_istance"
+            android:layout_width="200dip"
+            android:digits="1234567890"
+            android:singleLine="true"
+            android:maxLength="4"
+            android:hint="大于20m，小于2m"
+            android:inputType="number"
+            android:layout_height="45dip"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_ms_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="避障速度(m/s)："/>
+
+        <EditText
+            android:id="@+id/edit_obstacl_speed"
+            android:layout_width="200dip"
+            android:digits="1234567890."
+            android:maxLength="3"
+            android:hint="大于等于1m，小于等于2m"
+            android:singleLine="true"
+            android:inputType="numberDecimal"
+            android:layout_height="45dip"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_pk_obtacle"
+        android:layout_marginTop="@dimen/activity_magin_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:background="@drawable/alt_change_bg"/>
+</LinearLayout>

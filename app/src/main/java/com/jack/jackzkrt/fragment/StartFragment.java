@@ -5,9 +5,11 @@ import android.animation.AnimatorListenerAdapter;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jack.frame.core.AbsFragment;
@@ -42,8 +44,13 @@ public class StartFragment extends AbsFragment<FragmentStartBinding> {
     LauncherView launcherview;
     @Bind(R.id.ftb_start)
     Button ftb_start;
+
     @Bind(R.id.tv_show_register_info)
     TextView tv_show_register_info;
+    @Bind(R.id.tv_register_code)
+    TextView tv_register_code;
+    @Bind(R.id.linear_register_info)
+    LinearLayout linear_register_info;
 
     private int startBtnNum;
     private BaseProduct mProduct;
@@ -87,11 +94,15 @@ public class StartFragment extends AbsFragment<FragmentStartBinding> {
 
     private void showRegisterInfo() {
         //显示注册信息
-        tv_show_register_info.setVisibility(View.VISIBLE);
-        tv_show_register_info.setText(SharePreUtil.getString("detachment", mActivity, "detachment") + " " +
-                SharePreUtil.getString("overall", mActivity, "overall") + " " +
-                SharePreUtil.getString("bigArr", mActivity, "bigArr") + " " +
-                SharePreUtil.getString("centreArr", mActivity, "centreArr"));
+        linear_register_info.setVisibility(View.VISIBLE);
+        String detachment = SharePreUtil.getString("detachment", mActivity, "detachment");//支队
+        String overall = SharePreUtil.getString("overall", mActivity, "overall");//总队
+        String big = SharePreUtil.getString("bigArr", mActivity, "bigArr");//大队
+        String centre = SharePreUtil.getString("centreArr", mActivity, "centreArr");//中队
+
+        String registerInfo = detachment + "/" + overall + "/" + detachment + "/" + big + "/" + centre;
+        tv_show_register_info.setText(registerInfo);
+        tv_register_code.setText("ID码: " + Settings.System.getString(getContext().getContentResolver(), Settings.System.ANDROID_ID));
     }
 
     @OnClick(R.id.ftb_start)

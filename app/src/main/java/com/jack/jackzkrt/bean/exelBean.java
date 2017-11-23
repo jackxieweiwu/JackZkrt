@@ -1,4 +1,4 @@
-package com.jack.jackzkrt.bean;/*
+/*
 package zkrtdrone.zkrt.com.bean;
 
 

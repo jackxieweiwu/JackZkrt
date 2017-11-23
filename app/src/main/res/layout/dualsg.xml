@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_joystick_dualsg"
+    android:layout_width="390dip"
+    android:layout_height="278dip"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone">
+    <!--android:layout_width="390dip"-->
+    <!--android:layout_height="278dip"-->
+    <!--android:layout_width="550dp"-->
+    <!--android:layout_height="350dp"-->
+
+    <ImageView
+        android:id="@+id/img_joystick_sg_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@mipmap/fpv_camera_close" />
+
+
+    <RelativeLayout
+        android:id="@+id/view4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linear_btn_public"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/switch_txt_qh_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="可见光" />
+
+            <Switch
+                android:id="@+id/switch_txt_qh"
+                android:layout_width="55dip"
+                android:layout_height="20dip"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/switch_txt_qh_left"
+                android:background="@mipmap/fpv_switch_bg"
+                android:thumb="@mipmap/fpv_switch_ball" />
+
+            <TextView
+                android:id="@+id/switch_txt_qh_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/switch_txt_qh"
+                android:text="红外" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="195dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="278dip"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/view4"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ch5_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/activity_magin_10"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="夜视"
+                        android:textSize="@dimen/txt_size_18" />
+
+                    <com.example.jackspinnerlibrary.JackSpinner
+                        android:id="@+id/spinner_ch5"
+                        android:layout_width="150dip"
+                        android:layout_height="45dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/back_150"
+                        android:textSize="@dimen/txt_size_18"
+                        app:ms_background_color="@color/blue"
+                        app:ms_text_color="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ch7_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ch5_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/activity_magin_10"
+                    android:layout_marginTop="5dp">
+
+
+                    <Button
+                        android:id="@+id/btn_ch7"
+                        android:layout_width="150dip"
+                        android:layout_height="45dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/blue"
+                        android:text="触发陀螺校准"
+                        android:textColor="@color/back_150"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ch9_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ch7_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/activity_magin_10"
+                    android:layout_marginTop="5dp">
+
+
+                    <com.example.jackspinnerlibrary.JackSpinner
+                        android:id="@+id/spinner_ch9"
+                        android:layout_width="150dip"
+                        android:layout_height="45dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/back_150"
+                        android:textSize="12sp"
+                        app:ms_background_color="@color/blue"
+                        app:ms_text_color="@color/white" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ch10_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ch9_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="@dimen/activity_magin_10"
+                    android:layout_marginTop="5dp">
+
+
+                    <com.example.jackspinnerlibrary.JackSpinner
+                        android:id="@+id/spinner_ch10"
+                        android:layout_width="142dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/back_150"
+                        android:textSize="12sp"
+                        app:ms_background_color="@color/blue"
+                        app:ms_text_color="@color/white" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ch10_layout"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_seek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black_light" />
+
+                    <SeekBar
+                        android:id="@+id/zoom_seek"
+
+                        android:layout_width="195dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/activity_magin_5"
+                        android:layout_toStartOf="@+id/switch_txt_qh"
+                        android:max="1000"
+                        android:thumb="@drawable/thumb_image" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+
+            android:layout_width="195dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/txt_dualsg_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="拍照" />
+
+                <Switch
+                    android:id="@+id/switch_txt_camera_video"
+                    android:layout_width="55dip"
+                    android:layout_height="20dip"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/txt_dualsg_photo"
+                    android:background="@mipmap/fpv_switch_bg"
+                    android:thumb="@mipmap/fpv_switch_ball" />
+
+                <TextView
+                    android:id="@+id/txt_dualsg_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/switch_txt_camera_video"
+                    android:text="摄像" />
+
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/img_camera_video_dualsg"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_below="@+id/view2"
+                android:layout_centerInParent="true"
+
+                android:layout_margin="@dimen/activity_magin_5"
+                android:background="@drawable/btn_cam_capture_released" />
+
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_camera_video_dualsg"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_btn_public"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/activity_magin_5"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/stop_zoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:text="停止聚焦"
+            android:textColor="@color/white" />
+
+
+        <Button
+            android:id="@+id/button_color_camera_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn"
+            android:text="云台模式"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/button_color_camera_iso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_btn"
+            android:text="镜像翻转"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+
+        <Button
+            android:id="@+id/diurnal_luminous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn"
+            android:text="日夜光切换"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/button_color_camera_red"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn"
+            android:text="红外颜色"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

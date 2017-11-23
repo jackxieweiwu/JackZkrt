@@ -5,4 +5,23 @@
     <string name="app_name_three">瑞</string>
     <string name="app_name_four">泰</string>
     <string name="txt_remote_message">您可自定义遥控器背后的C1,C2按钮，更加便捷地进行飞行操作。</string>
+
+    <!--fragment_mount string-->
+    <string name="meter_unit2">℃</string>
+
+
+    <string name="array_battery">电池</string>
+    <string name="array_announce">喊话</string>
+    <string name="array_jettisonin">抛投</string>
+    <string name="array_poisonous">有毒气体</string>
+    <string name="array_parachute">降落伞</string>
+    <string name="array_obstacle">避障</string>
+    <string name="array_temperature">避温</string>
+    <string name="array_infrared">双光红外</string>
+    <string name="array_dimensional_imaging">三维成像</string>
+    <string name="array_blastingflash">爆闪</string>
+    <string name="array_searchlight">探照灯</string>
+    <string name="array_camera">相机</string>
+    <string name="draw_the_survey_region">绘制测量区域</string>
+    <string name="mission_is_too_lengthy">任务长度过长</string>
 </resources>

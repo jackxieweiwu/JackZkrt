@@ -2,7 +2,6 @@ package com.jack.jackzkrt.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,10 +22,8 @@ import com.jack.jackzkrt.fragment.setting.MapSettingFragment;
 import com.jack.jackzkrt.fragment.setting.RemoteSettingFragment;
 import com.jack.jackzkrt.widget.genericdrawerLayout.GenericDrawerLayout;
 import com.jack.jackzkrt.widget.genericdrawerLayout.MaterialMenuButton;
-import com.zhy.android.percent.support.PercentRelativeLayout;
 
 import java.util.Arrays;
-import java.util.List;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -89,6 +86,7 @@ public class MainFragment extends AbsFragment<FragmentMainBinding> {
         ListView drone_tool_bar = (ListView) mMenuViewLeft.findViewById(R.id.setting_list_icon);
         setAdapter = new SettingIconAdapter(mActivity, Arrays.asList(settingicl));
         drone_tool_bar.setAdapter(setAdapter);
+        setAdapter.setPosIndex(0);
         drone_tool_bar.setOnItemClickListener(onItemClickListener);
         /*TabLayout drone_tool_bar = (TabLayout) mMenuViewLeft.findViewById(R.id.drone_tool_bar);
         ViewPager drone_setting_pager = (ViewPager) mMenuViewLeft.findViewById(R.id.drone_setting_pager);*/
@@ -99,6 +97,7 @@ public class MainFragment extends AbsFragment<FragmentMainBinding> {
 //        mGenericDrawerLayout.setDrawerEmptySize((int) (getResources().getDisplayMetrics().density * 80 + 0.5f));
         mGenericDrawerLayout.setDrawerEmptySize(width);
         mGenericDrawerLayout.setDrawerCallback(mGenericDrawerCallback);
+        mGenericDrawerLayout.setOpennable(false);
     }
 
     //this is setting icon

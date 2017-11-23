@@ -29,11 +29,13 @@
     <ListView
         android:id="@+id/setting_list_icon"
         android:padding="5dip"
+        android:background="@color/back_150"
         android:layout_width="50dip"
         android:layout_height="match_parent"/>
 
     <FrameLayout
         android:layout_marginLeft="52dip"
+        android:background="@color/back_150"
         android:id="@+id/setting_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
