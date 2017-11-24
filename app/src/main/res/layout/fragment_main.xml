@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <!-- Widgets in top status bar -->
+        <!-- Widgets in top status bar 顶部状态栏控件 -->
         <com.zhy.android.percent.support.PercentRelativeLayout
             android:id="@+id/signal"
             android:layout_width="match_parent"
@@ -94,7 +94,7 @@
 
         </com.zhy.android.percent.support.PercentRelativeLayout>
 
-
+       <!-- 相机配置和配置窗口下面的状态栏控件-->
         <com.zhy.android.percent.support.PercentLinearLayout
             android:id="@+id/camera"
             android:layout_width="0dip"
@@ -153,7 +153,7 @@
             android:layout_height="218dp"
             tools:ignore="RtlHardcoded"/>
 
-
+       <!-- 左下角圆形-->
         <zkrt.ui.widget.dashboard.DashboardWidget
             android:id="@+id/Compass"
             android:layout_width="0dip"

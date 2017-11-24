@@ -129,7 +129,8 @@
         android:layout_marginTop="@dimen/activity_magin_10">
 
         <TextView
-            android:text="本机机械码"
+            android:id="@+id/tv_code_number"
+            android:text="本机ID码"
             android:layout_alignParentLeft="true"
             android:textSize="@dimen/txt_size_18"
             android:layout_centerVertical="true"
@@ -139,12 +140,13 @@
 
         <TextView
             android:id="@+id/tv_code"
+            android:layout_toRightOf="@+id/tv_code_number"
             android:textColor="@color/back_150"
             android:layout_alignParentRight="true"
             android:textSize="@dimen/txt_size_18"
             android:gravity="center"
             android:layout_centerVertical="true"
-            android:layout_width="150dip"
+            android:layout_width="match_parent"
             android:layout_marginRight="20dp"
             android:inputType="number"
             android:layout_height="45dip" />

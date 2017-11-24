@@ -13,11 +13,14 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jack.frame.core.AbsFragment;
+import com.jack.frame.util.AndroidUtils;
 import com.jack.frame.util.SharePreUtil;
+import com.jack.frame.util.rxutil.GeneralUtils;
 import com.jack.frame.util.show.T;
 import com.jack.jackzkrt.JackApplication;
 import com.jack.jackzkrt.R;
 import com.jack.jackzkrt.databinding.FragmentStartBinding;
+import com.jack.jackzkrt.dialog.DialogPairimg;
 import com.jack.jackzkrt.dialog.RegisterDialog;
 import com.jack.jackzkrt.interf.RegisterCallBackIntercace;
 import com.jack.jackzkrt.launcher.LauncherView;
@@ -29,9 +32,12 @@ import butterknife.Bind;
 import butterknife.OnClick;
 import dji.common.error.DJIError;
 import dji.common.error.DJISDKError;
+import dji.keysdk.callback.ActionCallback;
 import dji.sdk.base.BaseProduct;
 import dji.sdk.sdkmanager.DJISDKManager;
 import dji.thirdparty.eventbus.EventBus;
+import zkrt.ui.widget.compass.CompassCalibratingWorkFlow;
+import zkrtdrone.zkrt.com.maplib.info.until.Utils;
 
 import static com.jack.frame.core.AbsApplication.mActivity;
 
@@ -49,6 +55,8 @@ public class StartFragment extends AbsFragment<FragmentStartBinding> {
     TextView tv_show_register_info;
     @Bind(R.id.tv_register_code)
     TextView tv_register_code;
+    @Bind(R.id.tv_version_code)
+    TextView tv_version_code;
     @Bind(R.id.linear_register_info)
     LinearLayout linear_register_info;
 
@@ -84,12 +92,14 @@ public class StartFragment extends AbsFragment<FragmentStartBinding> {
                         } else {
                             showRegisterInfo();
                         }
+//                        EventBus.getDefault().post(1);
                     }
                 });
 
                 launcherview.start();
             }
         }, 500);
+
     }
 
     private void showRegisterInfo() {
@@ -103,36 +113,43 @@ public class StartFragment extends AbsFragment<FragmentStartBinding> {
         String registerInfo = detachment + "/" + overall + "/" + detachment + "/" + big + "/" + centre;
         tv_show_register_info.setText(registerInfo);
         tv_register_code.setText("ID码: " + Settings.System.getString(getContext().getContentResolver(), Settings.System.ANDROID_ID));
+        tv_version_code.setText("版本号:" + AndroidUtils.getAPPVersionCode(getActivity()) + "");
     }
 
     @OnClick(R.id.ftb_start)
     public void onStartBtnClick(View v) {
-//        if(startBtnNum==1){
-//        }else if(startBtnNum == 2){
-        //CompassCalibratingWorkFlow.startCalibration((ActionCallback)null);
-        // }
-        //TODO 判断stack里面为1，如果为1，则不需要进入以下代码
-//        if (GeneralUtils.isFastDoubleClick())
-//            return;
+        if (GeneralUtils.isFastDoubleClick())
+            return;
 
+        if (startBtnNum == 1) {
 
-        if (!SharePreUtil.getString("isRegister", getActivity(), "isRegister").equals("true")) {
-            RegisterDialog registerDialog = new RegisterDialog(getActivity(), new RegisterCallBackIntercace() {
-                @Override
-                public void getRegisterResult(boolean bool) {
-                    ftb_start.setEnabled(true);
-                    if (bool) {
-                        //显示注册信息
-                        showRegisterInfo();
+            if (!SharePreUtil.getString("isRegister", getActivity(), "isRegister").equals("true")) {
+                RegisterDialog registerDialog = new RegisterDialog(getActivity(), new RegisterCallBackIntercace() {
+                    @Override
+                    public void getRegisterResult(boolean bool) {
+                        ftb_start.setEnabled(true);
+                        if (bool) {
+                            //显示注册信息
+                            showRegisterInfo();
+                        }
                     }
-                }
-            });
-            registerDialog.show();
-        } else {
-            ftb_start.setEnabled(false);
-            EventBus.getDefault().post(1);
-        }
+                });
+                registerDialog.show();
 
+            } else {
+                ftb_start.setEnabled(false);
+                EventBus.getDefault().post(1);
+            }
+
+        } else if (startBtnNum == 2) {
+
+            if (GeneralUtils.isFastDoubleClick())
+                return;
+            //进入配对模式
+            DialogPairimg dialog = new DialogPairimg();
+            dialog.show(getChildFragmentManager(), "ip_dialog");
+
+        }
     }
 
     private AnimatorListenerAdapter mAnimatorListenerAdapter;
@@ -195,7 +212,7 @@ public class StartFragment extends AbsFragment<FragmentStartBinding> {
             mProduct = null;
         } else {
             startBtnNum = 0;
-            ftb_start.setVisibility(View.VISIBLE);
+            ftb_start.setVisibility(View.GONE);
         }
     }
 
